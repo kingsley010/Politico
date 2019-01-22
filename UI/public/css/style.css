@@ -78,6 +78,14 @@ hr {
     padding: 10px 10px;
 }
 
+.form-input9 {
+    margin-left: 155px;
+    box-sizing: border-box;
+    width: 30%;
+    padding: 10px 10px;
+}
+
+
 .form-button {
     background-color: #07c;
     color: white;
@@ -101,6 +109,16 @@ hr {
     margin-left: 1px;
     background-color: #df1212;
 }
+
+.form-h21, .profile-stats__h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.8em;
+    margin-left: 1px;
+    background-color: #23df12;
+}
+
 
 .text-area {
     width: 100%;
