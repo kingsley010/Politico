@@ -7,118 +7,46 @@
 
 body {
     margin: 0;
+    background-color: #efefef
 }
 hr {
     color: #07c;
     opacity: 0.5;
-    width: 65%;
-    margin-left: 120px;
 }
 
 /*Styling for generic items begins*/
-#label {
-    margin-left: 120px;
-}
-
-.form-input1 {
-    margin-left: 151px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-
-.form-input2 {
-    margin-left: 151px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-
-.form-input3 {
-    margin-left: 134px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input4 {
-    margin-left: 179px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input5 {
-    margin-left: 119px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input6 {
-    margin-left: 147px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input7 {
-    margin-left: 151px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input8 {
-    margin-left: 95px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input9 {
-    margin-left: 155px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-
 .form-button {
     background-color: #07c;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    width: 65%;
+    width: 100%;
     cursor: pointer;
-    margin-left: 120px;
+    border-radius: 2px;
 }
 
 .form-button:hover {
     opacity: 0.8;
 }
 
+.form-input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: rgb(240, 238, 238);
+}
+
 .form-h2, .profile-stats__h2 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 1.8em;
-    margin-left: 1px;
-    background-color: #df1212;
+    font-size: 1.2em;
 }
-
-.form-h21, .profile-stats__h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: 1.8em;
-    margin-left: 1px;
-    background-color: #23df12;
-}
-
 
 .text-area {
     width: 100%;
@@ -131,21 +59,39 @@ hr {
     box-sizing: border-box;
 }
 
+.upvote, .downvote {
+  color: #07c;
+  padding: 0 .2em;
+  cursor: pointer;
+}
+
+.upvote:hover {
+  color: green;
+}
+
+.downvote:hover {
+  color: red;
+}
 /*Styling for generic items ends*/
 
 
 /*Styling for header begins*/
 .header {
-    padding: 1em 1em;
-    background-color: #008aff;
+    background-color: white;
     overflow: hidden;
-    position: fixed;
-    width: 100%;
+    border: 3px;
+    box-shadow: 0 0 30px 0 #ccc;
+
 }
 
-#politico {
-    color: white;
-    font-size: 30px;
+.header1 {
+    
+    background-color: white;
+    overflow: hidden;
+    border: 3px;
+    box-shadow: 0 0 30px 0 #ccc;
+    position: fixed;
+    width: 100%;
 }
 
 .active {
@@ -163,21 +109,10 @@ hr {
 .header-right {
   float: right;
 }
-  
+
 .header-right::after {
   content: '';
   clear: both;
-}
-
-.header__link, .header__menu-icon {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    font-weight: 100;
-    padding: 0.8em 0.8em;
-    margin-right: 80px;
-    text-decoration: none;
 }
 
 .header_link {
@@ -185,11 +120,23 @@ hr {
     display: block;
     color: #07c;
     text-align: center;
-    font-weight: 100;
-    padding: 0.8em 0.8em;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0.2em 0.8em;
     margin-right: 1em;
     text-decoration: none;
-    margin-left: 180px;
+}
+
+.header__link, .header__menu-icon {
+    float: left;
+    display: block;
+    color: #07c;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.2em 0.8em;
+    margin-right: 1em;
+    text-decoration: none;
+    padding-top: 20px;
 }
 
 .header__menu-icon {
@@ -203,6 +150,7 @@ hr {
 .header__link:hover, .header__menu-icon:hover {
     background-color: #07c;
     color: white;
+    padding: 20px;
 }
 
 @media screen and (max-width: 650px) {
@@ -313,12 +261,14 @@ hr {
 
 /*Styling for login page begins*/
 .login-form {
-    width: 50%;
-    margin: 10% auto 0 auto;
-}
-
-#sign_div {
-    background-color: #f4f4f4;
+    width: 30%;
+    margin: 5% auto 5px auto;
+    border: 5px rgb(255, 255, 255) solid;
+    border-radius: 3px;
+    padding: 40px 10px 40px 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
+    background-color: white
 }
 
 .signup-pointer {
@@ -328,10 +278,17 @@ hr {
     flex-direction: column;
 }
 
+.account {
+    text-align: center;
+}
+
+.account a {
+    text-decoration: none;
+}
+
 .signup-pointer a {
     text-decoration: none;
     text-align: center;
-    font-weight: bolder;
     color: #0c5;
     border-bottom: 0.2em solid #0c5;
     padding: 1em;
@@ -341,12 +298,6 @@ hr {
     background-color: #0c5;
     color: white;
     border-bottom: 0.2em solid #444;
-}
-
-#fgt {
-    text-align: center;
-    margin-left: 10px;
-    background-color: #f4f4f4;
 }
 
 @media only screen and (max-width: 650px) {
@@ -360,7 +311,25 @@ hr {
 /*Styling for signup page begins*/
 .signup-form {
     width: 50%;
-    margin: 3% auto;
+    margin: -2% auto 10% auto;
+    border: 5%;
+    padding: 3% 4% 3% 4%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(77, 74, 74);
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.create-text {
+    margin-left: 130px;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 23px;
+    color: rgb(78, 78, 78);
+}
+
+.form-text a {
+    text-decoration: none;
 }
 /*Styling for signup page ends*/
 
@@ -599,21 +568,82 @@ hr {
 
 /*Styling for profile page begins*/
 .profile-container {
-    margin: 1em;
+    margin: 0 0 3% 0;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-image: url("../images/gate.jpg");
+    background-size: 100%;
+    
 }
 
 .user {
+    padding:1em;
+    padding-top: 3%;
+    padding-bottom: 1%;
     text-align: center;
 }
 
+.userinfo-container {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    background-color:#07c;
+}
+
 .user-photo {
-    width: 20em;
-    border-radius: 2em;
-    box-shadow: 0 10px 6px -6px #444;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    border: 5px gainsboro solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.user-detail__h2 {
+    margin-top: 200px;
+}
+
+.user-bio {
+    margin: 3px;
 }
 
 .user-detail {
     margin-bottom: -20px;
+}
+
+.unordered-list {
+    text-align: left;
+}
+
+.unordered-list1 {
+    text-align: center;
+    text-decoration: none;
+}
+
+.unordered-list1 li {
+    list-style-type: none;
+}
+
+.unordered-list li {
+    list-style-type: none;
+}
+
+.unordered-list a {
+    text-decoration: none;
+}
+
+.unordered-list2 {
+    text-align: left;
+    text-decoration: none;
+}
+
+.unordered-list2 li {
+    list-style-type: none;
+}
+
+#para {
+    font-weight: bold;
 }
 
 .user-username {
@@ -623,7 +653,7 @@ hr {
 .user-stat-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #efefef;
+    background-color: #fdfcfc;
 }
 
 .user-stat__p {
@@ -634,6 +664,13 @@ hr {
     padding: 1em;
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color: white; 
+}
+
+.profile-qb-container {
+    padding: 1em;
+    display: grid;
+    background-color: white; 
 }
 
 @media only screen and (max-width: 650px) {
@@ -644,11 +681,22 @@ hr {
 }
 
 .profile-container__h2 {
-    font-weight: 100;
+    font-weight: bold;
     text-align: center;
 }
 
+.profile-container__h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
 .user-recent-question-container {
+    border-right: 1px solid #efefef;
+    padding: 1em;
+    text-align: center;
+}
+
+.user-recent-question-contains {
     border-right: 1px solid #efefef;
     padding: 1em;
     text-align: center;
@@ -660,12 +708,28 @@ hr {
     margin-bottom: 1em;
 }
 
+.user-recent-questionss {
+    box-shadow: 3px rgb(3, 47, 88);
+    padding-top: 0.1em;
+    padding-bottom: 3px;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.user-recent-questions1 {
+    box-shadow: 3px rgb(3, 47, 88);
+    margin: 5px;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: white;
+}
+
 .user-recent-question__title__link, .user-popular-question__title__link {
     margin-bottom: 2px;
     text-decoration: none;
     color: #07c;
     font-size: 1.5em;
-
 }
 
 .user-recent-question__title__link:hover, .user-popular-question__title__link:hover {
@@ -674,14 +738,14 @@ hr {
     font-size: 1.5em;
 }
 
-.user-recent-question__stat-container, .user-popular-question__stat-container {
+.user-recent-question__stat-container, .follow__stat-container {
     opacity: 0.7;
     display: flex;
     justify-content: center;
     margin-top: -1em;
 }
 
-.user-recent-question__stat, .user-popular-question__stat {
+.user-recent-question__stat, .follow {
     padding: 1em;
 }
 
@@ -689,8 +753,6 @@ hr {
     padding: 1em;
     text-align: center;
 }
-
-
 
 .credit {
     background: #07c;
@@ -702,4 +764,9 @@ hr {
 
 .credit span {
     color: palegreen;
+}
+
+#footer {
+    padding: 20px;
+    text-align: center;
 }
