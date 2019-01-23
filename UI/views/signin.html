@@ -4,51 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Signin - Politico</title>
+    <title>Login - Politico</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 
-<body class="naija">
+<body>
    <header class="header">
       <div class="header-links" id="header__div">
-        <a class="header_link header-logo" href="../index.html"><span id="politico">POLITICO</span></a>
+        <a class="header_link header-logo" href="../index.html">Politico</a>
         <span class="header-right">
-          <a class="header__link" href="../index.html">Home</a>
-          <a class="header__link" href="signup.html">Signup</a>
+          <a class="header__link" href="../index.html">HOME</a>
+          <a class="header__link" href="signup.html">SIGN UP</a>
+          <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
         </span>
       </div>
-  </header><br><br>
-           <br><br>
-           <br><br>
+  </header>
     
-    <div>
-        <form class="signup-form">
-            <div id="sign_div">
-                    <h2 class="form-h21">SIGN IN</h2>
-
-                <div id="sign_div">    
-                    <label id="label" for="uname">Username</label>
-                    <input class="form-input1" type="text" placeholder="Kingsley" name="uname">
-                </div><br>
-
-                <div id="sign_div">
-                    <label id="label" for="psw">Password</label>
-                    <input class="form-input9" type="password" name="psw">
-                </div><br>
-
-                <div id="sign_div">
-                    <button class="form-button" type="submit">Signin</button>
-                </div>
-                    <hr>
-                            <div id="fgt">
-                                <span>Not yet signed up?</span> <a href="signup.html">signup</a>
-                            </div><br>
-             </div>        
-        </form>
-    </div>    
     
+    <form class="login-form" action="profile.html" method="POST">
+    
+        
+        <div>
+            <label for="uname">Username</label>
+            <input class="form-input" type="text" placeholder="Enter Username" name="uname">
+
+            <label for="psw">Password</label>
+            <input class="form-input" type="password" placeholder="Enter Password" name="psw">
+
+            <button class="form-button" type="submit">Login</button>
+        </div>
+        
+        <div class="account">
+            <span>Don't have an account?</span> <a href="signup.html">signup</a>   
+        </div>
+    </form>
+        
 </body>
 </html>
