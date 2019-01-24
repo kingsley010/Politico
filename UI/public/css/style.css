@@ -739,6 +739,17 @@ hr {
 }
 
 @media only screen and (max-width: 650px) {
+    .profile-ka-container {
+        display: block;
+        text-align: center;
+      }
+
+    .profile-pa-container {
+        display: block;
+        text-align: center;
+      }
+
+
     .profile-qa-container {
         display: block;
         text-align: center;
@@ -787,8 +798,8 @@ hr {
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-    background-color: red;
-    color: white;
+    background-color: #efefef;
+    color: black;
 }
 
 .profile-container--h2 {
@@ -796,8 +807,8 @@ hr {
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-    background-color:yellowgreen;
-    color: white;
+    background-color: #efefef;
+    color: black;
 }
 
 .profile-containerh2 {
@@ -805,8 +816,8 @@ hr {
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-    background-color: #07c;
-    color: white;
+    background-color: #efefef;
+    color: black;
 }
 
 .profile-containerh12 {
@@ -814,10 +825,30 @@ hr {
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-    background-color: green;
-    color: white;
+    background-color: #efefef;
+    color: black;
 }
 
+#partie {
+    font-weight: bold;
+}
+
+.party_logo {
+    width: 200px;
+}
+
+.party_logo1 {
+    width: 170px;
+}
+
+.party_logo2 {
+    width: 190px;
+}
+
+.party_logo3 {
+    width: 270px;
+    align-items: center;
+}
 
 .profile-container__h3 {
     font-weight: bold;
