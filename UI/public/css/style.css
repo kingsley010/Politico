@@ -7,118 +7,58 @@
 
 body {
     margin: 0;
+    background-color: #efefef
 }
 hr {
     color: #07c;
     opacity: 0.5;
-    width: 65%;
-    margin-left: 120px;
 }
 
 /*Styling for generic items begins*/
-#label {
-    margin-left: 120px;
-}
-
-.form-input1 {
-    margin-left: 151px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-
-.form-input2 {
-    margin-left: 151px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-
-.form-input3 {
-    margin-left: 134px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input4 {
-    margin-left: 179px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input5 {
-    margin-left: 119px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input6 {
-    margin-left: 147px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input7 {
-    margin-left: 151px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input8 {
-    margin-left: 95px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form-input9 {
-    margin-left: 155px;
-    box-sizing: border-box;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-
 .form-button {
     background-color: #07c;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    width: 65%;
+    width: 100%;
     cursor: pointer;
-    margin-left: 120px;
+    border-radius: 2px;
+}
+
+.form-butt {
+    background-color: #07c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 20px;
 }
 
 .form-button:hover {
     opacity: 0.8;
 }
 
+.form-input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: rgb(240, 238, 238);
+}
+
 .form-h2, .profile-stats__h2 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 1.8em;
-    margin-left: 1px;
-    background-color: #df1212;
+    font-size: 1.2em;
 }
-
-.form-h21, .profile-stats__h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: 1.8em;
-    margin-left: 1px;
-    background-color: #23df12;
-}
-
 
 .text-area {
     width: 100%;
@@ -130,22 +70,27 @@ hr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 /*Styling for generic items ends*/
 
 
 /*Styling for header begins*/
 .header {
-    padding: 1em 1em;
-    background-color: #008aff;
+    
+    background-color: white;
     overflow: hidden;
-    position: fixed;
-    width: 100%;
+    border: 3px;
+    box-shadow: 0 0 30px 0 #ccc;
+
 }
 
-#politico {
-    color: white;
-    font-size: 30px;
+.header1 {
+    
+    background-color: white;
+    overflow: hidden;
+    border: 3px;
+    box-shadow: 0 0 30px 0 #ccc;
+    position: fixed;
+    width: 100%;
 }
 
 .active {
@@ -163,21 +108,10 @@ hr {
 .header-right {
   float: right;
 }
-  
+
 .header-right::after {
   content: '';
   clear: both;
-}
-
-.header__link, .header__menu-icon {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    font-weight: 100;
-    padding: 0.8em 0.8em;
-    margin-right: 80px;
-    text-decoration: none;
 }
 
 .header_link {
@@ -185,11 +119,23 @@ hr {
     display: block;
     color: #07c;
     text-align: center;
-    font-weight: 100;
-    padding: 0.8em 0.8em;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0.2em 0.8em;
     margin-right: 1em;
     text-decoration: none;
-    margin-left: 180px;
+}
+
+.header__link, .header__menu-icon {
+    float: left;
+    display: block;
+    color: #07c;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.2em 0.8em;
+    margin-right: 1em;
+    text-decoration: none;
+    padding-top: 20px;
 }
 
 .header__menu-icon {
@@ -203,6 +149,17 @@ hr {
 .header__link:hover, .header__menu-icon:hover {
     background-color: #07c;
     color: white;
+    padding: 20px;
+}
+
+.on {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.off {
+    font-size: 20px;
 }
 
 @media screen and (max-width: 650px) {
@@ -238,9 +195,14 @@ hr {
 /*Styling for Jumbotron Begins*/
 .jumbotron-container {
     padding-top: 7em;
-    background-color: #07c;
-    height: 90vh;
+    background-image: url("../images/3.jpg");
+    height: 70vh;
     color: white;
+}
+
+#overlay {
+    background-color: rgba(0,0,0,0.05);
+    z-index: 2;
 }
 
 .jumbotron {
@@ -255,9 +217,10 @@ hr {
 }
 
 .jumbotron__link-container {
+    
     display: flex;
     flex-direction: column;
-    padding: 5em 0;
+    padding: 22em 0 0 5em;
     align-items: center;
 }
 
@@ -271,36 +234,36 @@ hr {
 
 .jumbotron__link {
     text-decoration: none;
-    width: 10em;
-    padding: 1em;
+    width: 5em;
+    padding: 0.5em;
     text-align: center;
     background-color: white;
     text-transform: uppercase;
-    margin: 1em;
+    margin: 0.5em;
     border-radius: 25px;
 }
 
 .jumbotron__link:last-of-type {
-    width: 15em;
+    width: 5em;
 }
 
 .jumbotron__link:last-of-type:hover {
-    width: 17em;
+    width: 7em;
 }
 
 .jumbotron__link:hover {
-    width: 12em;
+    width: 7em;
     background-color: #08f;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 25px;
 }
 
 @media only screen and (max-width: 650px) {
     .jumbotron-container {
-        height: 100vh;
+        height: 70vh;
     }
     .jumbotron {
-        height: 100vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
     }
@@ -308,17 +271,26 @@ hr {
     .jumbotron__info {
         margin-bottom: 15%;
     }
+    .aboutus {
+        display: block;
+        border: 2% white solid;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px rgb(224, 224, 224);
+        background-color: white;
+    }
 }
 /*Styling for jumbo ends*/
 
 /*Styling for login page begins*/
 .login-form {
-    width: 50%;
-    margin: 10% auto 0 auto;
-}
-
-#sign_div {
-    background-color: #f4f4f4;
+    width: 30%;
+    margin: 5% auto 5px auto;
+    border: 5px rgb(255, 255, 255) solid;
+    border-radius: 3px;
+    padding: 40px 10px 40px 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
+    background-color: white
 }
 
 .signup-pointer {
@@ -328,10 +300,17 @@ hr {
     flex-direction: column;
 }
 
+.account {
+    text-align: center;
+}
+
+.account a {
+    text-decoration: none;
+}
+
 .signup-pointer a {
     text-decoration: none;
     text-align: center;
-    font-weight: bolder;
     color: #0c5;
     border-bottom: 0.2em solid #0c5;
     padding: 1em;
@@ -343,14 +322,11 @@ hr {
     border-bottom: 0.2em solid #444;
 }
 
-#fgt {
-    text-align: center;
-    margin-left: 10px;
-    background-color: #f4f4f4;
-}
-
 @media only screen and (max-width: 650px) {
     .login-form {
+        width: 80%;
+    }
+    .signup-form {
         width: 80%;
     }
 }
@@ -360,7 +336,33 @@ hr {
 /*Styling for signup page begins*/
 .signup-form {
     width: 50%;
-    margin: 3% auto;
+    margin: -2% auto 10% auto;
+    border: 5%;
+    padding: 3% 4% 3% 4%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(77, 74, 74);
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.create-text {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 23px;
+    color: rgb(78, 78, 78);
+}
+
+.create-tex {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 23px;
+    color: red;
+}
+
+.form-text a {
+    text-decoration: none;
 }
 /*Styling for signup page ends*/
 
@@ -599,21 +601,82 @@ hr {
 
 /*Styling for profile page begins*/
 .profile-container {
-    margin: 1em;
+    margin: 0 0 3% 0;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-image: url("../images/cover.jpg");
+    background-size: 100%; 
 }
 
 .user {
+    padding:1em;
+    padding-top: 3%;
+    padding-bottom: 1%;
     text-align: center;
 }
 
+.userinfo-container {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    background-color:#cecdff;
+    
+}
+
 .user-photo {
-    width: 20em;
-    border-radius: 2em;
-    box-shadow: 0 10px 6px -6px #444;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    border: 5px gainsboro solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.user-detail__h2 {
+    margin-top: 200px;
+}
+
+.user-bio {
+    margin: 3px;
 }
 
 .user-detail {
     margin-bottom: -20px;
+}
+
+.unordered-list {
+    text-align: left;
+}
+
+.unordered-list1 {
+    text-align: center;
+    text-decoration: none;
+}
+
+.unordered-list1 li {
+    list-style-type: none;
+}
+
+.unordered-list li {
+    list-style-type: none;
+}
+
+.unordered-list a {
+    text-decoration: none;
+}
+
+.unordered-list2 {
+    text-align: left;
+    text-decoration: none;
+}
+
+.unordered-list2 li {
+    list-style-type: none;
+}
+
+#para {
+    font-weight: bold;
 }
 
 .user-username {
@@ -623,7 +686,7 @@ hr {
 .user-stat-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #efefef;
+    background-color: #fdfcfc;
 }
 
 .user-stat__p {
@@ -634,6 +697,61 @@ hr {
     padding: 1em;
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color: white; 
+}
+
+.profile-la-container {
+    padding: 5em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-ma-container {
+    padding: 1em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-pa-container {
+    padding: 5em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-ka-container {
+    padding: 0em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+#want {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: red;
+}
+
+#want h3 a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#want_vote {
+    text-align: inherit;
 }
 
 @media only screen and (max-width: 650px) {
@@ -641,14 +759,102 @@ hr {
         display: block;
         text-align: center;
       }
+
+    .profile-la-container {
+        display: block;
+        text-align: center;
+      }
+
+    .profile-ma-container {
+        display: block;
+        text-align: center;
+      }
+
+      .userinfo-container {
+        display: block;
+        text-align: center;
+      }
+
+      .user-recent-questions1 {
+        display: block;
+        text-align: center;
+      }
+
+      #footer_logger {
+          text-align: center;
+      }
 }
 
-.profile-container__h2 {
-    font-weight: 100;
+#footer_logger {
     text-align: center;
 }
 
+.profile-container__h2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: #07c;
+    color: white;
+}
+
+.profile-container-h2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: red;
+    color: white;
+}
+
+.profile-container--h2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color:yellowgreen;
+    color: white;
+}
+
+.profile-containerh2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: #07c;
+    color: white;
+}
+
+.profile-containerh12 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: green;
+    color: white;
+}
+
+
+.profile-container__h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
 .user-recent-question-container {
+    border-right: 1px solid #efefef;
+    padding: 1em;
+    text-align: center;
+}
+
+.user-recent-question-container a {
+    text-decoration: none;
+    color: rgb(4, 139, 72);
+    font-weight: bold;
+}
+
+.user-recent-question-contains {
+    display: flex;
+    flex-direction: column;
     border-right: 1px solid #efefef;
     padding: 1em;
     text-align: center;
@@ -657,7 +863,27 @@ hr {
 .user-recent-question, .user-popular-question {
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding-top: 0.1em;
+    padding-bottom: 0.1em;
     margin-bottom: 1em;
+}
+
+.user-recent-questionss {
+    box-shadow: 3px rgb(3, 47, 88);
+    padding-top: 0.1em;
+    padding-bottom: 3px;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.user-recent-questions1 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px rgb(3, 47, 88);
+    margin: 5px;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: white;
 }
 
 .user-recent-question__title__link, .user-popular-question__title__link {
@@ -665,7 +891,6 @@ hr {
     text-decoration: none;
     color: #07c;
     font-size: 1.5em;
-
 }
 
 .user-recent-question__title__link:hover, .user-popular-question__title__link:hover {
@@ -674,14 +899,14 @@ hr {
     font-size: 1.5em;
 }
 
-.user-recent-question__stat-container, .user-popular-question__stat-container {
+.user-recent-question__stat-container, .follow__stat-container {
     opacity: 0.7;
     display: flex;
     justify-content: center;
     margin-top: -1em;
 }
 
-.user-recent-question__stat, .user-popular-question__stat {
+.user-recent-question__stat, .follow {
     padding: 1em;
 }
 
@@ -689,8 +914,6 @@ hr {
     padding: 1em;
     text-align: center;
 }
-
-
 
 .credit {
     background: #07c;
@@ -702,4 +925,33 @@ hr {
 
 .credit span {
     color: palegreen;
+}
+
+#footer {
+    padding: 20px;
+    text-align: center;
+}
+
+#footer_logged {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 100px;
+    background-color: rgb(89, 231, 148);
+}
+
+.aboutus {
+    border: 50px white solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(224, 224, 224);
+    background-color: white;
+}
+
+.about__h2 {
+    text-align: center;
+    color:#008aff;
 }
