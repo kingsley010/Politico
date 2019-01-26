@@ -864,11 +864,14 @@ hr {
 #want {
     margin-left: 40%;
     margin-right: 40%;
-    border:2
+    border:2;
     text-align: center;
     color: red;
     background-color: #cecdff;
-    
+}
+
+#new_office {
+    text-align: center;
 }
 
 #want h3 a {

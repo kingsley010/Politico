@@ -14,9 +14,9 @@
 <body>
    <header class="header">
       <div class="header-links" id="header__div">
-        <a class="header_link header-logo" href="../index.html">Politico</a>
+        <a class="header_link header-logo" href="admin.html">Politico</a>
         <span class="header-right">
-          <a class="header__link" href="logged.html">HOME</a>
+          <a class="header__link" href="admin.html">HOME</a>
           <a class="header__link" href="profile.html">PROFILE</a>
           <a class="header__link" href="../index.html">LOGOUT</a>
           <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
@@ -25,9 +25,9 @@
   </header>
     
     
-    <form class="login-form-admin" action="profile.html" method="POST">
+    <form class="login-form-admin" action="admin.html" method="POST">
     
-        <h2> Create new office</h2>
+        <h2 id="new_office"> Create new office</h2>
         <div>
             <label for="uname">Office type</label>
             <input class="form-input" type="text" placeholder="e.g. Federal, Legislative, State or L.G.A" name="uname" required>
