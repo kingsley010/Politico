@@ -24,7 +24,6 @@ hr {
     width: 100%;
     cursor: pointer;
     border-radius: 2px;
-<<<<<<< HEAD
 }
 
 .form-butt {
@@ -87,59 +86,6 @@ hr {
 .form-e {
     background-color: #07c;
     color: white;
-=======
-}
-
-.form-butt {
-    background-color: #07c;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 2px;
-    font-size: 20px;
-}
-
-.form-button-vote {
-    background-color: #07c;
-    color: white;
-    padding: 14px 20px 10px 0px;
-    margin: 8px 0 0 900px;
-    border: none;
-    width: 30%;
-    cursor: pointer;
-    border-radius: 2px;
-    font-size: 20px;
-    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
-}
-
-.form-but {
-    background-color: white;
-    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
-    padding-bottom: 20px;
-    border: 20px;
-}
-
-.form-b {
-    background-color: #07c;
-    color: white;
-    font-size: 15px;
-    float: right;
-    margin-right: 80px;
-    border-spacing: 10px;
-}
-
-
-.form-c {
-    background-color: #07c;
-    color: white;
-    font-size: 15px;
-    float: right;
-    margin-right: 20px;
-    border-spacing: 10px;
->>>>>>> 723ad7e... feat(template): admin create party
 }
 
 .form-button:hover {
@@ -174,23 +120,6 @@ hr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-<<<<<<< HEAD
-
-.upvote, .downvote {
-  color: #07c;
-  padding: 0 .2em;
-  cursor: pointer;
-}
-
-.upvote:hover {
-  color: green;
-}
-
-.downvote:hover {
-  color: red;
-}
-=======
->>>>>>> 723ad7e... feat(template): admin create party
 /*Styling for generic items ends*/
 
 
@@ -202,11 +131,6 @@ hr {
     border: 3px;
     box-shadow: 0 0 30px 0 #ccc;
 
-<<<<<<< HEAD
-}
-
-.header1 {
-=======
 }
 
 .header1 {
@@ -220,7 +144,6 @@ hr {
 }
 
 .header2 {
->>>>>>> 723ad7e... feat(template): admin create party
     
     background-color: white;
     overflow: hidden;
@@ -228,26 +151,6 @@ hr {
     box-shadow: 0 0 30px 0 #ccc;
     position: fixed;
     width: 100%;
-<<<<<<< HEAD
-=======
-    top: 0;
-}
-
-.tytle {
-    margin-top: 100px;
-    margin-left: 45px;
-    color: #07c;
-}
-
-.tytle_a {
-    margin-top: 50px;
-    margin-left: 45px;
-    color: #07c;
-}
-
-#tytle_b {
-    font-weight: bold;
->>>>>>> 723ad7e... feat(template): admin create party
 }
 
 .active {
@@ -307,8 +210,6 @@ hr {
     background-color: #07c;
     color: white;
     padding: 20px;
-<<<<<<< HEAD
-=======
 }
 
 .on {
@@ -319,7 +220,6 @@ hr {
 
 .off {
     font-size: 20px;
->>>>>>> 723ad7e... feat(template): admin create party
 }
 
 @media screen and (max-width: 650px) {
@@ -520,28 +420,6 @@ hr {
     .signup-form {
         width: 80%;
     }
-<<<<<<< HEAD
-    .form-b {
-        background-color: #07c;
-        color: white;
-        font-size: 15px;
-        float: right;
-        margin-right: 80px;
-        margin-top: 20px;
-        border-spacing: 10px;
-    }
-    
-    .form-c {
-        background-color: #07c;
-        color: white;
-        font-size: 15px;
-        float: right;
-        margin-right: 20px;
-        margin-bottom: 20px; 
-        border-spacing: 10px;
-    }
-=======
->>>>>>> 723ad7e... feat(template): admin create party
 }
 /*Styling for login page ends*/
 
@@ -559,19 +437,14 @@ hr {
 }
 
 .create-text {
-<<<<<<< HEAD
     margin-left: 130px;
-=======
     text-align: center;
->>>>>>> 723ad7e... feat(template): admin create party
     margin-top: 50px;
     font-weight: bold;
     font-size: 23px;
     color: rgb(78, 78, 78);
 }
 
-<<<<<<< HEAD
-=======
 .create-tex {
     text-align: center;
     margin-top: 50px;
@@ -580,7 +453,6 @@ hr {
     color: red;
 }
 
->>>>>>> 723ad7e... feat(template): admin create party
 .form-text a {
     text-decoration: none;
 }
@@ -882,14 +754,11 @@ hr {
     list-style-type: none;
 }
 
-<<<<<<< HEAD
-=======
 .unordered-list li a {
     color: #07c;
     font-weight: bold;
 }
 
->>>>>>> 723ad7e... feat(template): admin create party
 .unordered-list a {
     text-decoration: none;
 }
@@ -937,8 +806,6 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
-<<<<<<< HEAD
-=======
 .profile-la-admin-container {
     padding: 5em 2em 12em 2em;
     display: grid;
@@ -948,7 +815,6 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
->>>>>>> 723ad7e... feat(template): admin create party
 .profile-ma-container {
     padding: 1em 2em 1em 2em;
     display: grid;
@@ -967,29 +833,27 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
-<<<<<<< HEAD
 .profile-za-container {
     padding: 5em 2em 1em 2em;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-=======
+}
+
 .profile-ka-container {
     padding: 1em 2em 1em 2em;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
->>>>>>> 723ad7e... feat(template): admin create party
     background-color: white; 
     border: 20px;
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
-<<<<<<< HEAD
 .profile-ka-container {
     padding: 0em 2em 1em 2em;
-=======
+}
+
 .profile-a-container {
     padding: 1em 2em 1em 2em;
->>>>>>> 723ad7e... feat(template): admin create party
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     background-color: white; 
@@ -997,26 +861,11 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
-<<<<<<< HEAD
 #want {
     margin: 0px;
     padding: 0px;
     text-align: center;
     color: red;
-=======
-.want-container{
-    background-color: white;
-}
-
-#want {
-    margin-left: 40%;
-    margin-right: 40%;
-    border:2
-    text-align: center;
-    color: red;
-    background-color: #cecdff;
-    
->>>>>>> 723ad7e... feat(template): admin create party
 }
 
 #want h3 a {
@@ -1083,7 +932,6 @@ hr {
     padding: 2px;
     background-color: #07c;
     color: white;
-<<<<<<< HEAD
 }
 
 .profile-container-h2 {
@@ -1095,31 +943,13 @@ hr {
     color: black;
 }
 
-=======
-}
-
-.profile-container-h2 {
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
-    padding: 2px;
-    background-color: red;
-    color: white;
-}
-
->>>>>>> 723ad7e... feat(template): admin create party
 .profile-container--h2 {
     font-weight: bold;
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-<<<<<<< HEAD
     background-color: #efefef;
     color: black;
-=======
-    background-color:yellowgreen;
-    color: white;
->>>>>>> 723ad7e... feat(template): admin create party
 }
 
 .profile-containerh2 {
@@ -1127,13 +957,8 @@ hr {
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-<<<<<<< HEAD
     background-color: #efefef;
     color: black;
-=======
-    background-color: #07c;
-    color: white;
->>>>>>> 723ad7e... feat(template): admin create party
 }
 
 .profile-containerh12 {
@@ -1141,7 +966,6 @@ hr {
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-<<<<<<< HEAD
     background-color: #efefef;
     color: black;
 }
@@ -1166,12 +990,6 @@ hr {
     width: 270px;
     align-items: center;
 }
-=======
-    background-color: green;
-    color: white;
-}
-
->>>>>>> 723ad7e... feat(template): admin create party
 
 .profile-container__h3 {
     font-weight: bold;
@@ -1253,7 +1071,6 @@ hr {
     text-align: center;
 }
 
-<<<<<<< HEAD
 .user-popular-questions-container-office {
     padding: 1em;
     text-align: center;
@@ -1265,8 +1082,6 @@ hr {
     color: #07c;
 }
 
-=======
->>>>>>> 723ad7e... feat(template): admin create party
 .credit {
     background: #07c;
     text-transform: lowercase;
@@ -1293,10 +1108,7 @@ hr {
     padding: 10px;
     text-align: center;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 723ad7e... feat(template): admin create party
 .about-container {
     display: grid;
     grid-template-columns: 50% 50%;
