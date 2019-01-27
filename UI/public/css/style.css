@@ -151,6 +151,23 @@ hr {
     box-shadow: 0 0 30px 0 #ccc;
     position: fixed;
     width: 100%;
+    top: 0;
+}
+
+.tytle {
+    margin-top: 100px;
+    margin-left: 45px;
+    color: #07c;
+}
+
+.tytle_a {
+    margin-top: 50px;
+    margin-left: 45px;
+    color: #07c;
+}
+
+#tytle_b {
+    font-weight: bold;
 }
 
 .active {
@@ -848,10 +865,6 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
-.profile-ka-container {
-    padding: 0em 2em 1em 2em;
-}
-
 .profile-a-container {
     padding: 1em 2em 1em 2em;
     display: grid;
@@ -1021,6 +1034,25 @@ hr {
     padding-top: 0.1em;
     padding-bottom: 0.1em;
     margin-bottom: 1em;
+}
+
+.user-recent-questionss {
+    box-shadow: 3px rgb(3, 47, 88);
+    padding-top: 0.1em;
+    padding-bottom: 3px;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.user-recent-questions1 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px rgb(3, 47, 88);
+    margin: 5px;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: white;
 }
 
 .user-recent-questionss {
