@@ -197,6 +197,11 @@ hr {
     cursor: pointer;
 }
 
+#overlay {
+    background-color: rgba(0,0,0,0.05);
+    z-index: 2;
+}
+
 .jumbotron {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
