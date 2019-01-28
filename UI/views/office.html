@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>office - Politico</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+</head>
+
+<body>
+   <header class="header">
+      <div class="header-links" id="header__div">
+        <a class="header_link header-logo" href="logged.html">Politico</a>
+        <span class="header-right">
+          <a class="header__link" href="logged.html">HOME</a>
+          <a class="header__link" href="profile.html">PROFILE</a>
+          <a class="header__link" href="../index.html">LOGOUT</a>
+          <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
+        </span>
+      </div>
+  </header>
+    
+    <p class="create-tex">Run for office</p>
+    <form class="login-form-interest" action="logged.html" method="POST">
+    
+        
+        <div class="off-ice">
+            <div class="office-run">
+                <label for="uname" class="off">What office do you want to run for?</label>
+                <select name="office"  class="on">
+                    <option value="sel"> Select office </option>
+                    <option value="federal"> Federal </option>
+                    <option value="legislative"> Legislative </option>
+                    <option value="state"> State </option>
+                    <option value="lga"> Local government </option>
+                </select>
+            </div>
+            <div class="office-run">
+                <label for="uname" class="off">Under which party?</label>
+                <select name="office"  class="on">
+                        <option value="sel"> Select party </option>
+                        <option value="federal"> APGA </option>
+                        <option value="legislative"> ANN </option>
+                        <option value="state"> APC </option>
+                        <option value="lga"> PDP </option>
+                </select>
+            </div>
+            <div class="office-run">
+                <label for="uname" class="off">Have you registered under the said party?</label>
+                <select name="office"  class="on">
+                        <option value="sel"> Yes </option>
+                        <option value="federal"> No </option>
+                </select>
+            </div>
+
+            <button class="form-butt" type="submit">submit</button>
+
+        </div>
+        
+    </form>
+        
+    <script src="js/toggle.js"></script>
+</body>
+</html>

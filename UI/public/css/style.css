@@ -24,6 +24,7 @@ hr {
     width: 100%;
     cursor: pointer;
     border-radius: 2px;
+    font-size: 20px;
 }
 
 .form-butt {
@@ -163,7 +164,6 @@ hr {
     box-shadow: 0 0 30px 0 #ccc;
     position: fixed;
     width: 100%;
-
 }
 
 .header2 {
@@ -260,6 +260,14 @@ hr {
 
 .off {
     font-size: 20px;
+}
+
+.off-ice {
+    padding: 40px 20px 0px 20px;
+}
+
+.office-run {
+    padding: 10px;
 }
 
 @media screen and (max-width: 650px) {
@@ -423,6 +431,18 @@ hr {
     box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
     background-color: white
 }
+    
+.login-form-interest {
+    width: 30%;
+    margin: 2% auto 5px auto;
+    border: 5px rgb(255, 255, 255) solid;
+    border-radius: 3px;
+    padding: 0px 10px 40px 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
+    background-color: white
+}
+
 
 .signup-pointer {
     width: 50%;
@@ -457,6 +477,9 @@ hr {
     .login-form {
         width: 80%;
     }
+    .login-form-interest {
+        width: 80%;
+    }
     .signup-form {
         width: 80%;
     }
@@ -489,7 +512,7 @@ hr {
     margin-top: 50px;
     font-weight: bold;
     font-size: 23px;
-    color: red;
+    color:#07c;
 }
 
 .form-text a {
@@ -1096,21 +1119,21 @@ hr {
     background-color: white;
 }
 
+.user-recent-questionss {
+    box-shadow: 3px rgb(3, 47, 88);
+    padding-top: 0.1em;
+    padding-bottom: 3px;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
 .user-recent-questions1 {
     display: flex;
     flex-direction: column;
     box-shadow: 3px rgb(3, 47, 88);
     margin: 5px;
     padding: 3px;
-    border-radius: 2px;
-    background-color: white;
-}
-
-.user-recent-questionss {
-    box-shadow: 3px rgb(3, 47, 88);
-    padding-top: 0.1em;
-    padding-bottom: 3px;
-    margin-bottom: 1em;
     border-radius: 2px;
     background-color: white;
 }
