@@ -40,7 +40,7 @@ hr {
     box-sizing: border-box;
     border-radius: 2px;
     background-color: rgb(240, 238, 238);
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .form-h2, .profile-stats__h2 {
@@ -329,6 +329,10 @@ hr {
     font-weight: bold;
     font-size: 23px;
     color: rgb(78, 78, 78);
+}
+
+.form-text {
+    text-align: center;
 }
 
 .form-text a {
