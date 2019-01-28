@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>new_party - Politico</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+</head>
+
+<body>
+   <header class="header">
+      <div class="header-links" id="header__div">
+        <a class="header_link header-logo" href="admin.html">Politico</a>
+        <span class="header-right">
+          <a class="header__link" href="admin.html">HOME</a>
+          <a class="header__link" href="profile.html">PROFILE</a>
+          <a class="header__link" href="../index.html">LOGOUT</a>
+          <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
+        </span>
+      </div>
+  </header>
+    
+    
+    <form class="login-form-admin" action="profile.html" method="POST">
+    
+        <h2 id="new-party-header"> Create new party</h2>
+        <div>
+            <label for="uname">Party Name</label>
+            <input class="form-input" type="text" placeholder="Enter partyname" name="uname" required>
+
+            <label for="psw">Description</label>
+            <input class="form-input" type="password" placeholder="Type party full name" name="psw" required>
+
+            <button class="form-butt" type="submit">submit</button>
+        </div>
+
+    </form>
+        
+</body>
+</html>
