@@ -24,7 +24,57 @@ hr {
     width: 100%;
     cursor: pointer;
     border-radius: 2px;
+}
+
+.form-butt {
+    background-color: #07c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 2px;
     font-size: 20px;
+}
+
+.form-button-vote {
+    background-color: #07c;
+    color: white;
+    padding: 14px 20px 10px 0px;
+    margin: 8px 0 0 900px;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.form-but {
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+    padding-bottom: 20px;
+    border: 20px;
+}
+
+.form-b {
+    background-color: #07c;
+    color: white;
+    font-size: 15px;
+    float: right;
+    margin-right: 80px;
+    border-spacing: 10px;
+}
+
+
+.form-c {
+    background-color: #07c;
+    color: white;
+    font-size: 15px;
+    float: right;
+    margin-right: 20px;
+    border-spacing: 10px;
 }
 
 .form-button:hover {
@@ -60,25 +110,12 @@ hr {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-.upvote, .downvote {
-  color: #07c;
-  padding: 0 .2em;
-  cursor: pointer;
-}
-
-.upvote:hover {
-  color: green;
-}
-
-.downvote:hover {
-  color: red;
-}
 /*Styling for generic items ends*/
 
 
 /*Styling for header begins*/
 .header {
+    
     background-color: white;
     overflow: hidden;
     border: 3px;
@@ -94,6 +131,34 @@ hr {
     box-shadow: 0 0 30px 0 #ccc;
     position: fixed;
     width: 100%;
+
+}
+
+.header2 {
+    
+    background-color: white;
+    overflow: hidden;
+    border: 3px;
+    box-shadow: 0 0 30px 0 #ccc;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.tytle {
+    margin-top: 100px;
+    margin-left: 45px;
+    color: #07c;
+}
+
+.tytle_a {
+    margin-top: 50px;
+    margin-left: 45px;
+    color: #07c;
+}
+
+#tytle_b {
+    font-weight: bold;
 }
 
 .active {
@@ -155,6 +220,16 @@ hr {
     padding: 20px;
 }
 
+.on {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.off {
+    font-size: 20px;
+}
+
 @media screen and (max-width: 650px) {
   .header-right {
     float: none;
@@ -180,6 +255,26 @@ hr {
         display: block;
         text-align: left;
     }
+    .form-b {
+        background-color: #07c;
+        color: white;
+        font-size: 15px;
+        float: right;
+        margin-right: 80px;
+        margin-top: 20px;
+        border-spacing: 10px;
+    }
+    
+    
+    .form-c {
+        background-color: #07c;
+        color: white;
+        font-size: 15px;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 20px; 
+        border-spacing: 10px;
+    }
 }
 /*Styling for header ends*/
 
@@ -188,9 +283,14 @@ hr {
 /*Styling for Jumbotron Begins*/
 .jumbotron-container {
     padding-top: 7em;
-    background-color: #07c;
-    height: 90vh;
+    background-image: url("../images/3.jpg");
+    height: 70vh;
     color: white;
+}
+
+#overlay {
+    background-color: rgba(0,0,0,0.05);
+    z-index: 2;
 }
 
 .jumbotron {
@@ -205,9 +305,10 @@ hr {
 }
 
 .jumbotron__link-container {
+    
     display: flex;
     flex-direction: column;
-    padding: 5em 0;
+    padding: 22em 0 0 5em;
     align-items: center;
 }
 
@@ -221,42 +322,49 @@ hr {
 
 .jumbotron__link {
     text-decoration: none;
-    width: 10em;
-    padding: 1em;
+    width: 5em;
+    padding: 0.5em;
     text-align: center;
     background-color: white;
     text-transform: uppercase;
-    margin: 1em;
+    margin: 0.5em;
     border-radius: 25px;
 }
 
 .jumbotron__link:last-of-type {
-    width: 15em;
+    width: 5em;
 }
 
 .jumbotron__link:last-of-type:hover {
-    width: 17em;
+    width: 7em;
 }
 
 .jumbotron__link:hover {
-    width: 12em;
+    width: 7em;
     background-color: #08f;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 25px;
 }
 
 @media only screen and (max-width: 650px) {
     .jumbotron-container {
-        height: 100vh;
+        height: 70vh;
     }
     .jumbotron {
-        height: 100vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
     }
     
     .jumbotron__info {
         margin-bottom: 15%;
+    }
+    .aboutus {
+        display: block;
+        border: 2% white solid;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px rgb(224, 224, 224);
+        background-color: white;
     }
 }
 /*Styling for jumbo ends*/
@@ -265,6 +373,17 @@ hr {
 .login-form {
     width: 30%;
     margin: 5% auto 5px auto;
+    border: 5px rgb(255, 255, 255) solid;
+    border-radius: 3px;
+    padding: 40px 10px 40px 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
+    background-color: white
+}
+
+.login-form-admin {
+    width: 30%;
+    margin: 8% auto 5px auto;
     border: 5px rgb(255, 255, 255) solid;
     border-radius: 3px;
     padding: 40px 10px 40px 10px;
@@ -306,6 +425,9 @@ hr {
     .login-form {
         width: 80%;
     }
+    .signup-form {
+        width: 80%;
+    }
 }
 /*Styling for login page ends*/
 
@@ -313,8 +435,7 @@ hr {
 /*Styling for signup page begins*/
 .signup-form {
     width: 50%;
-    margin: auto;
-    margin: 5% auto 10% auto;
+    margin: -2% auto 10% auto;
     border: 5%;
     padding: 3% 4% 3% 4%;
     background-color: rgb(255, 255, 255);
@@ -324,11 +445,23 @@ hr {
 }
 
 .create-text {
-    margin-left: 130px;
+    text-align: center;
     margin-top: 50px;
     font-weight: bold;
     font-size: 23px;
     color: rgb(78, 78, 78);
+}
+
+.create-tex {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 23px;
+    color: red;
+}
+
+.form-text a {
+    text-decoration: none;
 }
 
 .form-text {
@@ -579,15 +712,6 @@ hr {
 
 
 /*Styling for profile page begins*/
-.profile-container {
-    margin: 0 0 3% 0;
-    display: grid;
-    grid-template-columns: 25% 75%;
-    background-image: url("../images/space.jpg");
-    background-size: 100%;
-    
-}
-
 .user {
     padding:1em;
     padding-top: 3%;
@@ -642,6 +766,11 @@ hr {
     list-style-type: none;
 }
 
+.unordered-list li a {
+    color: #07c;
+    font-weight: bold;
+}
+
 .unordered-list a {
     text-decoration: none;
 }
@@ -680,16 +809,140 @@ hr {
     background-color: white; 
 }
 
+.profile-la-container {
+    padding: 5em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-la-admin-container {
+    padding: 5em 2em 12em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-ma-container {
+    padding: 1em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-pa-container {
+    padding: 5em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-ka-container {
+    padding: 1em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-a-container {
+    padding: 1em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: white; 
+    border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.want-container{
+    background-color: white;
+}
+
+#want {
+    margin-left: 40%;
+    margin-right: 40%;
+    border:2;
+    text-align: center;
+    color: red;
+    background-color: #cecdff; 
+}
+
+#reset {
+    color:#07c;
+    text-align: center;
+}
+
+#want h3 a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#want_vote {
+    text-align: inherit;
+}
+
 @media only screen and (max-width: 650px) {
     .profile-qa-container {
         display: block;
         text-align: center;
       }
+
+    .profile-la-container {
+        display: block;
+        text-align: center;
+      }
+
+    .profile-ma-container {
+        display: block;
+        text-align: center;
+      }
+
+      .userinfo-container {
+        display: block;
+        text-align: center;
+      }
+
+      .user-recent-questions1 {
+        display: block;
+        text-align: center;
+      }
+
+      #footer_logger {
+          text-align: center;
+      }
+}
+
+#footer_logger {
+    text-align: center;
 }
 
 .profile-container__h2 {
     font-weight: bold;
     text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: #07c;
+    color: white;
+}
+
+.profile-container-h2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: red;
+    color: white;
 }
 
 .profile-container__h3 {
@@ -703,7 +956,15 @@ hr {
     text-align: center;
 }
 
+.user-recent-question-container a {
+    text-decoration: none;
+    color: rgb(4, 139, 72);
+    font-weight: bold;
+}
+
 .user-recent-question-contains {
+    display: flex;
+    flex-direction: column;
     border-right: 1px solid #efefef;
     padding: 1em;
     text-align: center;
@@ -712,7 +973,27 @@ hr {
 .user-recent-question, .user-popular-question {
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding-top: 0.1em;
+    padding-bottom: 0.1em;
     margin-bottom: 1em;
+}
+
+.user-recent-questionss {
+    box-shadow: 3px rgb(3, 47, 88);
+    padding-top: 0.1em;
+    padding-bottom: 3px;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.user-recent-questions1 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px rgb(3, 47, 88);
+    margin: 5px;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: white;
 }
 
 .user-recent-questionss {
@@ -776,4 +1057,32 @@ hr {
 #footer {
     padding: 20px;
     text-align: center;
+}
+
+#footer_logged {
+    padding: 20px;
+    text-align: center;
+}
+
+#footer_logged_admin {
+    padding: 10px;
+    text-align: center;
+}
+.about-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 100px;
+    background-color: rgb(89, 231, 148);
+}
+
+.aboutus {
+    border: 50px white solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(224, 224, 224);
+    background-color: white;
+}
+
+.about__h2 {
+    text-align: center;
+    color:#008aff;
 }
