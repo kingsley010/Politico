@@ -88,6 +88,27 @@ hr {
     color: white;
 }
 
+.form-button-vote {
+    background-color: #07c;
+    color: white;
+    padding: 14px 20px 10px 0px;
+    margin: 8px 0 0 450px;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.form-but {
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+    padding-bottom: 20px;
+    border: 20px;
+}
+
+
 .form-button:hover {
     opacity: 0.8;
 }
@@ -825,15 +846,6 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
-.profile-la-admin-container {
-    padding: 5em 2em 12em 2em;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: white; 
-    border: 20px;
-    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
-}
-
 .profile-ma-container {
     padding: 1em 2em 1em 2em;
     display: grid;
@@ -898,6 +910,13 @@ hr {
 #new_office {
     text-align: center;
     color: #07c;
+    background-color: white;
+}
+
+#voting {
+    color:#07c;
+    font-weight: bold;
+    padding-right: 5px;
 }
 
 #want h3 a {
@@ -1078,23 +1097,6 @@ hr {
 }
 
 .user-recent-questions1 {
-    box-shadow: 3px rgb(3, 47, 88);
-    margin: 5px;
-    padding: 3px;
-    border-radius: 2px;
-    background-color: white;
-}
-
-.user-recent-questionss {
-    box-shadow: 3px rgb(3, 47, 88);
-    padding-top: 0.1em;
-    padding-bottom: 3px;
-    margin-bottom: 1em;
-    border-radius: 2px;
-    background-color: white;
-}
-
-.user-recent-questions1 {
     display: flex;
     flex-direction: column;
     box-shadow: 3px rgb(3, 47, 88);
@@ -1109,16 +1111,6 @@ hr {
     padding-top: 0.1em;
     padding-bottom: 3px;
     margin-bottom: 1em;
-    border-radius: 2px;
-    background-color: white;
-}
-
-.user-recent-questions1 {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 3px rgb(3, 47, 88);
-    margin: 5px;
-    padding: 3px;
     border-radius: 2px;
     background-color: white;
 }
