@@ -38,24 +38,26 @@ hr {
     font-size: 20px;
 }
 
-.form-button-vote {
+.form-admin {
     background-color: #07c;
-    color: white;
-    padding: 14px 20px 10px 0px;
-    margin: 8px 0 0 900px;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
-    width: 30%;
+    width: 100%;
     cursor: pointer;
     border-radius: 2px;
-    font-size: 20px;
-    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+    margin-left: -900px;
+    margin-top: 35px;
 }
 
-.form-but {
-    background-color: white;
-    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
-    padding-bottom: 20px;
-    border: 20px;
+#create_office {
+    font-weight: bold;
+    color: #07c;
+}
+
+.form-admin-a {
+    color: white;
+    font-size: 20px;
 }
 
 .form-b {
@@ -67,7 +69,6 @@ hr {
     border-spacing: 10px;
 }
 
-
 .form-c {
     background-color: #07c;
     color: white;
@@ -75,6 +76,16 @@ hr {
     float: right;
     margin-right: 20px;
     border-spacing: 10px;
+}
+
+.form-d {
+    background-color: #07c;
+    color: white;
+}
+
+.form-e {
+    background-color: #07c;
+    color: white;
 }
 
 .form-button:hover {
@@ -468,10 +479,6 @@ hr {
     text-align: center;
 }
 
-.form-text a {
-    text-decoration: none;
-}
-
 .form-text-header {
     text-align: center;
 }
@@ -845,6 +852,12 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
+.profile-za-container {
+    padding: 5em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
 .profile-ka-container {
     padding: 1em 2em 1em 2em;
     display: grid;
@@ -899,6 +912,17 @@ hr {
 }
 
 @media only screen and (max-width: 650px) {
+    .profile-ka-container {
+        display: block;
+        text-align: center;
+      }
+
+    .profile-pa-container {
+        display: block;
+        text-align: center;
+      }
+
+
     .profile-qa-container {
         display: block;
         text-align: center;
@@ -955,16 +979,6 @@ hr {
 }
 
 .profile-container--h2 {
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
-    padding: 2px;
-    background-color:yellowgreen;
-    color: white;
-}
-
-.profile-containerh2 {
-    font-weight: bold;
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
@@ -972,15 +986,62 @@ hr {
     color: white;
 }
 
+.profile-container-h2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: #efefef;
+    color: black;
+}
+
+.profile-container--h2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: #efefef;
+    color: black;
+}
+
+.profile-containerh2 {
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 2px;
+    background-color: #efefef;
+    color: black;
+}
+
 .profile-containerh12 {
     font-weight: bold;
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
-    background-color: green;
-    color: white;
+    background-color: #efefef;
+    color: black;
 }
 
+#partie {
+    font-weight: bold;
+}
+
+.party_logo {
+    width: 200px;
+}
+
+.party_logo1 {
+    width: 170px;
+}
+
+.party_logo2 {
+    width: 190px;
+}
+
+.party_logo3 {
+    width: 270px;
+    align-items: center;
+}
 
 .profile-container__h3 {
     font-weight: bold;
@@ -1012,20 +1073,11 @@ hr {
     padding-top: 0.1em;
     padding-bottom: 0.1em;
     margin-bottom: 1em;
-}
-
-.user-recent-questionss {
-    box-shadow: 3px rgb(3, 47, 88);
-    padding-top: 0.1em;
-    padding-bottom: 3px;
-    margin-bottom: 1em;
     border-radius: 2px;
     background-color: white;
 }
 
 .user-recent-questions1 {
-    display: flex;
-    flex-direction: column;
     box-shadow: 3px rgb(3, 47, 88);
     margin: 5px;
     padding: 3px;
@@ -1062,6 +1114,8 @@ hr {
 }
 
 .user-recent-questions1 {
+    display: flex;
+    flex-direction: column;
     box-shadow: 3px rgb(3, 47, 88);
     margin: 5px;
     padding: 3px;
@@ -1096,6 +1150,17 @@ hr {
 .user-popular-questions-container {
     padding: 1em;
     text-align: center;
+}
+
+.user-popular-questions-container-office {
+    padding: 1em;
+    text-align: center;
+    margin-top: -60px;
+}
+
+#new-party-header {
+    text-align: center;
+    color: #07c;
 }
 
 .credit {
