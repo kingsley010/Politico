@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
-    "build": "babel --presets env src -d dist"
+    "build": "babel --presets env src -d dist",
+    "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text _mocha --timeout 10000 --require babel-core/register --exit",
+    "coveralls": "nyc npm test && nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,18 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
+    "supertest": "^3.4.2"
   }
 }
