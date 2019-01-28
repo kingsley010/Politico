@@ -160,7 +160,6 @@ hr {
 
 .off {
     font-size: 20px;
-<<<<<<< HEAD
 }
 
 .off-ice {
@@ -169,8 +168,6 @@ hr {
 
 .office-run {
     padding: 10px;
-=======
->>>>>>> 0f87043de1bcea2450b942faa26a6fff8d68e431
 }
 
 @media screen and (max-width: 650px) {
@@ -302,7 +299,6 @@ hr {
     box-sizing: border-box;
     box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
     background-color: white
-<<<<<<< HEAD
 }
 
 .login-form-interest {
@@ -314,8 +310,6 @@ hr {
     box-sizing: border-box;
     box-shadow: 1px 1px 1px 1px rgb(209, 209, 209);
     background-color: white
-=======
->>>>>>> 0f87043de1bcea2450b942faa26a6fff8d68e431
 }
 
 
@@ -352,12 +346,9 @@ hr {
     .login-form {
         width: 80%;
     }
-<<<<<<< HEAD
     .login-form-interest {
         width: 80%;
     }
-=======
->>>>>>> 0f87043de1bcea2450b942faa26a6fff8d68e431
     .signup-form {
         width: 80%;
     }
@@ -390,11 +381,7 @@ hr {
     margin-top: 50px;
     font-weight: bold;
     font-size: 23px;
-<<<<<<< HEAD
     color:#07c;
-=======
-    color: red;
->>>>>>> 0f87043de1bcea2450b942faa26a6fff8d68e431
 }
 
 .form-text a {
@@ -836,7 +823,6 @@ hr {
 
 .profile-container-h2 {
     font-weight: bold;
-<<<<<<< HEAD
     text-align: center;
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding: 2px;
@@ -862,33 +848,6 @@ hr {
     color: white;
 }
 
-=======
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
-    padding: 2px;
-    background-color: red;
-    color: white;
-}
-
-.profile-container--h2 {
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
-    padding: 2px;
-    background-color:yellowgreen;
-    color: white;
-}
-
-.profile-containerh2 {
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
-    padding: 2px;
-    background-color: #07c;
-    color: white;
-}
-
->>>>>>> 0f87043de1bcea2450b942faa26a6fff8d68e431
 .profile-containerh12 {
     font-weight: bold;
     text-align: center;
