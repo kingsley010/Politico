@@ -31,7 +31,8 @@ app.get('/', (req, res) => {
 }); 
 
 // Route Files
-
+import party from './src/routes/partyRoutes';
+app.use('/api/v1', party);
 
 app.use((req, res, next) => {
 	const error = new Error('Not Found');
