@@ -6,7 +6,7 @@ import parties from '../src/models/partyModel';
 chai.use(chaiHttp);
 const { expect } = chai;
 
-describe('createParty', () => {
+describe('getAllParties', () => {
     it('should return get all parties successfully', (done) => {
         chai
           .request(app)
