@@ -47,8 +47,10 @@ export default class Validate {
     const { name } = req.body;
     if (!validate.name.test(name)) {
       error = 'party name is invalid';
+    } if (Number(name)) {
+        error = 'Please input a valid name';
     }
-    if (!name || name === undefined) {
+    if (!name || !name.trim()) {
       error = 'Please input party name';
     }
     const duplicateNames = parties.find(party => party.name === name);
@@ -76,10 +78,12 @@ export default class Validate {
     const validate = Helper.validate();
     let error = '';
     const { hqAddress } = req.body;
-
+    const { Address } = hqAddress.trim();
     if (!validate.hqAddress.test(hqAddress)) {
       error = 'hqAddress is invalid';
-    } else if (!hqAddress || hqAddress === undefined) {
+    } if(Number(hqAddress)) {
+        error = 'Please input a valid address';
+    } else if (!hqAddress || !hqAddress.trim()) {
       error = 'Address is required';
     }
     if (error) {
@@ -102,11 +106,10 @@ export default class Validate {
     const validate = Helper.validate();
     let error = '';
     const { logoUrl } = req.body;
-
     if (!validate.logoUrl.test(logoUrl)) {
       error = 'party logo is invalid';
     }
-    if (!logoUrl || logoUrl === undefined) {
+    if (!logoUrl || !logoUrl.trim()) {
       error = 'Please input a logo for your party';
     }
     if (error) {
