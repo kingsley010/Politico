@@ -1,4 +1,3 @@
-import Helper from '../helpers/helper';
 import offices from '../models/officeModel';
 
 /**
@@ -33,66 +32,4 @@ export default class Validate {
         }
         return next();
         }
-
-    /**
-    * @method officeType
-    * @description Validates Office type 
-    * @param {object} req - The Request Object
-    * @param {object} res - The Response Object
-    * @returns {object} JSON API Response
-    */
-  static officeType(req, res, next) {
-    const validate = Helper.validate();
-    let error = '';
-    const { type } = req.body;
-    if (!validate.type.test(type)) {
-      error = 'Invalid office type';
-    }
-    if (Number(type)) {
-    error = 'Please input a valid type';
-    }
-    if (!type.trim()) {
-      error = 'This field is required';
-    }
-    if (error) {
-      return res.status(404).json({
-        status: 404, 
-        error,
-      });
-    }
-    return next();
-  }    
-
-  /**
-      * @method officeName
-      * @description Validates office name
-      * @param {object} req - The Request Object
-      * @param {object} res - The Response Object
-      * @returns {object} JSON API Response
-      */
-     static officeName(req, res, next) {
-        const validate = Helper.validate();
-        let error = '';
-        const { name } = req.body;
-        if (!validate.name.test(name)) {
-          error = 'Office name is invalid';
-        }
-        if (Number(name)) {
-        error = 'Please input a valid name';
-        }
-        if (!name.trim()) {
-          error = 'This field is required';
-        }
-        const duplicateOffice = offices.find(office => office.name === name);
-        if (duplicateOffice) {
-          error = 'This name already exists';
-        }
-        if (error) {
-          return res.status(404).json({
-            status: 404, 
-            error,
-          });
-        }
-        return next();
-      }    
 }
