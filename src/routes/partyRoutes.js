@@ -1,5 +1,5 @@
 import express from 'express';
-import PartyController from '../controllers/PartyController';
+import PartyController from '../controllers/partyController';
 import Validate from '../middlewares/Validator';
 
 const router = express.Router();
