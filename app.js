@@ -31,7 +31,8 @@ app.get('/', (req, res) => {
 }); 
 
 // Route Files
-
+import office from './src/routes/officeRoutes';
+app.use('/api/v1', office);
 
 app.use((req, res, next) => {
 	const error = new Error('Not Found');
