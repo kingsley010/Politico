@@ -48,7 +48,10 @@ export default class Validate {
     if (!validate.type.test(type)) {
       error = 'Invalid office type';
     }
-    if (!type || type === undefined) {
+    if (Number(type)) {
+    error = 'Please input a valid type';
+    }
+    if (!type.trim()) {
       error = 'This field is required';
     }
     if (error) {
@@ -74,7 +77,10 @@ export default class Validate {
         if (!validate.name.test(name)) {
           error = 'Office name is invalid';
         }
-        if (!name || name === undefined) {
+        if (Number(name)) {
+        error = 'Please input a valid name';
+        }
+        if (!name.trim()) {
           error = 'This field is required';
         }
         const duplicateOffice = offices.find(office => office.name === name);

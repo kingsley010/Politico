@@ -23,7 +23,7 @@ describe('createOffice', () => {
         done(err);
       });
   });
-  it('should have status 404 for invalid name', (done) => {
+  it('should have status 500 for invalid name', (done) => {
     const newOffice = {
       type: 'federal',
       name: 1,
@@ -33,7 +33,7 @@ describe('createOffice', () => {
       .post('/api/v1/offices')
       .send(newOffice)
       .end((err, res) => {
-        expect(res).to.have.status(404);
+        expect(res).to.have.status(500);
         done(err);
       });
   });
