@@ -25,7 +25,7 @@ describe('createParty', () => {
           done(err);
         });
     });
-    it('should have a status 404 for invalid name', (done) => {
+    it('should have a status 500 for invalid name', (done) => {
       const newParty = {
         name: 7,
         hqAddress: 'Abuja',
@@ -36,11 +36,7 @@ describe('createParty', () => {
         .post('/api/v1/parties')
         .send(newParty)
         .end((err, res) => {
-          expect(res).to.have.status(404);
-          expect(res.body).to.deep.equal({
-            status: 404,
-            error: 'party name is invalid',
-          });
+          expect(res).to.have.status(500);
           done(err);
         });
     });
