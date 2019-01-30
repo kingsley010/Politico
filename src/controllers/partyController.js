@@ -19,13 +19,14 @@ export default class PartyController {
       data: parties,
     });
   }
-      /**
-       * @description Admin - Create a new political party
-       * @param {object} req - The request object
-       * @param {object} res - The response object
-       * @return {object} JSON representing data object
-       * @memberof createParty
-       */
+
+  /**
+   * @description Admin - Create a new political party
+   * @param {object} req - The request object
+   * @param {object} res - The response object
+   * @return {object} JSON representing data object
+   * @memberof createParty
+   */
   static createParty(req, res) {
     const {
       name, hqAddress, logoUrl,
@@ -53,6 +54,7 @@ export default class PartyController {
       error: 'An error occured, please try again',
     });
   } 
+
    /**   
    * @description Get Party By Id
    * @param {object} req - The request object
@@ -94,6 +96,33 @@ export default class PartyController {
     return res.status(200).json({
       status: 200,
       data: [{ id, name }],
+    }); 
+  };
+
+   /**
+   * @description Deletes party by id
+   * @param {object} req - The request object
+   * @param {object} res - The response object
+   * @returns {object} {object} JSON object representing data object
+   * @memberof deletePartyById
+   */
+
+  static deletePartyById(req, res) {
+    const id = Number(req.params.id);
+    const deleteParty = parties.find(party => party.id === id);
+    const objId = parties.indexOf(deleteParty);
+    parties.splice(objId, 1);
+    if (objId) {
+      return res.status(200).json({
+        status: 200,
+        data: [{
+          message: 'Party deleted successfully',
+        }],
+      });
+    }
+    return res.status(404).json({
+      status: 404,
+      error: 'Party does not exist',
     });
   }
 }
