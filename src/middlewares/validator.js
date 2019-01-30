@@ -78,7 +78,6 @@ export default class Validate {
     const validate = Helper.validate();
     let error = '';
     const { hqAddress } = req.body;
-    const { Address } = hqAddress.trim();
     if (!validate.hqAddress.test(hqAddress)) {
       error = 'hqAddress is invalid';
     } if(Number(hqAddress)) {
