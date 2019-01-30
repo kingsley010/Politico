@@ -47,8 +47,6 @@ export default class Validate {
     const { name } = req.body;
     if (!validate.name.test(name)) {
       error = 'party name is invalid';
-    } if (Number(name)) {
-        error = 'Please input a valid name';
     }
     if (!name || !name.trim()) {
       error = 'Please input party name';

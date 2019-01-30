@@ -17,6 +17,7 @@ describe('getAllParties', () => {
             done(err);
           });
       });
+    });
 describe('createParty', () => {
     it('should have a status 201', (done) => {
       const newParty = {
@@ -108,8 +109,25 @@ describe('createParty', () => {
           done(err);
         });
     });
+  });     
+describe('editPartyName', () => {
+    it('should edit party successfully', (done) => {
+      const editName = { 
+          name: 'Coalition' };
+      chai
+        .request(app)
+        .patch('/api/v1/parties/1/name')
+        .send(editName)
+        .end((err, res) => {
+          expect(res).to.have.status(200);
+          expect(res.body).to.deep.equal({
+            status: 200,
+            data: res.body.data,
+          });
+          done(err);
+        });
+    });
   });
-});
 describe('getPartyById', () => {
     it('should find party by id successfully', (done) => {
         chai
@@ -149,4 +167,3 @@ describe('getPartyById', () => {
           });
       });
     });
-  
