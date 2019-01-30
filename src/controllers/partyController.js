@@ -52,5 +52,21 @@ export default class PartyController {
       status: 400,
       error: 'An error occured, please try again',
     });
+  } 
+   /**   
+   * @description Get Party By Id
+   * @param {object} req - The request object
+   * @param {object} res - The response object
+   * @returns {object} {object} JSON object representing data object
+   * @memberof getPartyById
+   */
+  static getPartyById(req, res) {
+    const data = parties.filter(
+      partyObj => Number(req.params.id) === partyObj.id,
+    );
+    res.status(200).json({
+      status: 200,
+      data,
+    });
   }
 }
