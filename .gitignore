@@ -1,9 +1,5 @@
 node_modules/
 .env
 .coveralls.yml
-<<<<<<< HEAD
 coverage
-=======
-coverage/
->>>>>>> ft-delete-a-specific-party-163318638
 .nyc_output
