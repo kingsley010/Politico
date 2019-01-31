@@ -6,6 +6,20 @@ import offices from '../src/models/officeModel';
 chai.use(chaiHttp);
 const { expect } = chai;
 
+
+describe('getAllOffice', () => {
+  it('should get all offices successfully', (done) => {
+    chai
+      .request(app)
+      .get('/api/v1/offices')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body.data).to.deep.equal(offices);
+        done(err);
+      });
+  });
+});
+
 describe('createOffice', () => {
   it('should create office successfully', (done) => {
     const newOffice = {
@@ -81,15 +95,3 @@ describe('createOffice', () => {
   });
 });
   
-describe('getAllOffice', () => {
-  it('should get all offices successfully', (done) => {
-    chai
-      .request(app)
-      .get('/api/v1/offices')
-      .end((err, res) => {
-        expect(res).to.have.status(200);
-        expect(res.body.data).to.deep.equal(offices);
-        done(err);
-      });
-  });
-});

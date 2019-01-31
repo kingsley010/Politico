@@ -147,7 +147,14 @@ describe('getPartyById', () => {
           .get('/api/v1/parties/4')
           .end((err, res) => {
             expect(res).to.have.status(200);
-            expect(res.body.data).to.deep.equal([parties[4 - 1]]);
+            expect(res.body.data).to.deep.equal([
+              {
+                id: 4,
+                name: 'Peoples Democratic Party (PDP)',
+                hqAddress: 'Abuja',
+                logoUrl: 'pdp.jpg'
+                }
+            ]);
             done(err);
           });
       });
