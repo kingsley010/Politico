@@ -1,5 +1,9 @@
 node_modules/
 .env
 .coveralls.yml
+<<<<<<< HEAD
 coverage
+=======
+coverage/
+>>>>>>> ft-get-a-specific-political-office-163318714
 .nyc_output
