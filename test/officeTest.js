@@ -65,7 +65,7 @@ describe('createOffice', () => {
         done(err);
       });
   });
-  it('shoul have a 404 status error for creating invalid office type', (done) => {
+  it('should have a 404 status error for creating invalid office type', (done) => {
     const newOffice = {
       type: 'football',
       name: 'Peter Obi',
@@ -76,6 +76,19 @@ describe('createOffice', () => {
       .send(newOffice)
       .end((err, res) => {
         expect(res).to.have.status(404);
+        done(err);
+      });
+  });
+});
+  
+describe('getAllOffice', () => {
+  it('should get all offices successfully', (done) => {
+    chai
+      .request(app)
+      .get('/api/v1/offices')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body.data).to.deep.equal(offices);
         done(err);
       });
   });

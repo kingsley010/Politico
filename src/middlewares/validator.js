@@ -3,10 +3,10 @@ import parties from '../models/partyModel';
 import offices from '../models/officeModel';
 
 /**
- * @class Validate
- * @description validates party and office model
- * @exports Validate
- */
+  * @class Validate
+  * @description validates party and office model
+  * @exports Validate
+  */
 
 export default class Validate {
   /**
@@ -100,23 +100,23 @@ export default class Validate {
     * @param {object} res - The Response Object
     * @returns {object} JSON API Response
     */
-    static findOfficeById(req, res, next) {
-        const { id } = req.params;
-        if (!Number(id)) {
-            return res.status(400).json({
-            status: 400,
-            error: 'Please input a valid id',
-            });
-        }
-        const officeFound = offices.find(office => office.id === Number(id));
-        if (!officeFound) {
-            return res.status(404).json({
-            status: 404,
-            error: 'Office does not exist',
-            });
-        }
-        return next();
-        }
+  static findOfficeById(req, res, next) {
+      const { id } = req.params;
+      if (!Number(id)) {
+          return res.status(400).json({
+          status: 400,
+          error: 'Please input a valid id',
+          });
+      }
+      const officeFound = offices.find(office => office.id === Number(id));
+      if (!officeFound) {
+          return res.status(404).json({
+          status: 404,
+          error: 'Office does not exist',
+          });
+      }
+      return next();
+  }
 
   /**
     * @method validateLogoUrl
@@ -164,7 +164,7 @@ export default class Validate {
     if (Number(type)) {
     error = 'Please input a valid type';
     }
-    if (!type.trim()) {
+    if (!type || !type.trim()) {
       error = 'This field is required';
     }
     if (error) {
@@ -183,29 +183,29 @@ export default class Validate {
     * @param {object} res - The Response Object
     * @returns {object} JSON API Response
     */
-     static officeName(req, res, next) {
-        const validate = Helper.validate();
-        let error = '';
-        const { name } = req.body;
-        if (!validate.name.test(name)) {
-          error = 'Office name is invalid';
-        }
-        if (Number(name)) {
-        error = 'Please input a valid name';
-        }
-        if (!name.trim()) {
-          error = 'This field is required';
-        }
-        const duplicateOffice = offices.find(office => office.name === name);
-        if (duplicateOffice) {
-          error = 'This name already exists';
-        }
-        if (error) {
-          return res.status(404).json({
-            status: 404, 
-            error,
-          });
-        }
-        return next();
-    }    
+  static officeName(req, res, next) {
+    const validate = Helper.validate();
+    let error = '';
+    const { name } = req.body;
+    if (!validate.name.test(name)) {
+      error = 'Office name is invalid';
+    }
+    if (Number(name)) {
+    error = 'Please input a valid name';
+    }
+    if (!name || !name.trim()) {
+      error = 'This field is required';
+    }
+    const duplicateOffice = offices.find(office => office.name === name);
+    if (duplicateOffice) {
+      error = 'This name already exists';
+    }
+    if (error) {
+      return res.status(404).json({
+        status: 404, 
+        error,
+      });
+    }
+    return next();
+  }    
 }
