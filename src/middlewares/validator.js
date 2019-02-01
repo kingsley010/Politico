@@ -49,6 +49,9 @@ export default class Validate {
     if (!validate.name.test(name)) {
       error = 'party name is invalid';
     }
+    if (Number(name)) {
+      error = 'Please input a valid name';
+    }
     if (!name || !name.trim()) {
       error = 'Please input party name';
     }
@@ -208,4 +211,50 @@ export default class Validate {
     }
     return next();
   }    
+
+  /**
+   * @method partyExists
+   * @description Validates existing party
+   * @param {object} req - The Request Object
+   * @param {object} res - The Response Object
+   * @returns {object} JSON API Response
+   */
+  static partyExists(req, res, next) {
+    const party = {
+      text: 'SELECT * FROM party WHERE name = $1;',
+      values: [req.body.name],
+    };
+    return client.query(party, (error, dbRes) => {
+      if (dbRes.rows[0]) {
+        return res.status(409).json({
+          status: 409,
+          error: 'Party name already exists, please choose another name',
+        });
+      }
+      return next();
+    });
+  }
+
+  /**
+   * @method officeExists
+   * @description Validates existing office
+   * @param {object} req - The Request Object
+   * @param {object} res - The Response Object
+   * @returns {object} JSON API Response
+   */
+  static officeExists(req, res, next) {
+    const officeName = {
+      text: 'SELECT * FROM office WHERE name = $1;',
+      values: [req.body.name],
+    };
+    return client.query(officeName, (error, dbRes) => {
+      if (dbRes.rows[0]) {
+        return res.status(409).json({
+          status: 409,
+          error: 'Office name already exists, Please choose another name',
+        });
+      }
+      return next();
+    });
+  }
 }

@@ -1,6 +1,6 @@
 import { Client } from 'pg';
 import dotenv from 'dotenv';
-import { userTable } from './tables';
+import { userTable, partyTable, officeTable, candidateTable, voteTable } from './tables';
 
 dotenv.config();
 
@@ -13,8 +13,12 @@ const create = async () => {
   try {
     await client.connect();
     await client.query(userTable);
+    await client.query(partyTable);
+    await client.query(officeTable);
+    await client.query(candidateTable);
+    await client.query(voteTable);
     await client.end();
-    console.log('User and Record tables created successfully');
+    console.log('users, party, office, candidates and vote tables created successfully');
     process.exit(0);
   } catch (error) {
     console.log(error);
