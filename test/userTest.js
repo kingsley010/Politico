@@ -40,18 +40,6 @@ describe('signUp test cases', () => {
         });
     });
   });
-  it('should return sign up user successfully', (done) => {
-    const user = {
-        firstname: 'Ben', lastname: 'Jone', othername: 'Barry', email: 'abca@gmail.com', password: '12345', phonenumber: '12345678901', passporturl: 'red.jpeg', isAdmin: 'false', registered: 'Date.now()', updated: 'Date.now()'
-    };
-    request.post('/api/v1/auth/signup')
-      .send(user)
-      .expect(500)
-      .end((err, res) => {
-        expect(res.body.status).to.equal(500);
-        done(err);
-      });
-});
   describe('/POST api/v1/auth/signup', () => {
     it('should return `400` status code with errors message for empty request', (done) => {
       request.post('/api/v1/auth/signup')

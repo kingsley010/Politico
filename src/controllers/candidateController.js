@@ -1,3 +1,5 @@
+import pg from 'pg';
+import 'babel-polyfill';
 import client from '../config/dbConnect';
 
 /**
@@ -7,13 +9,13 @@ import client from '../config/dbConnect';
  */
 
 class CandidateController {
-  /**
-         * @description registers a new political candidate
-         * @param {object} req - The request object
-         * @param {object} res - The response object
-         * @return {object} JSON representing data object
-         * @memberof createCandidate
-         */
+/**
+  * @description registers a new political candidate
+  * @param {object} req - The request object
+  * @param {object} res - The response object
+  * @return {object} JSON representing data object
+  * @memberof createCandidate
+  */
   static registerCandidate(req, res) {
     const {
       office, party, candidate,
