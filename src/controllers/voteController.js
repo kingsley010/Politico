@@ -1,38 +1,39 @@
-import 'babel-polyfill';
 import client from '../config/dbConnect';
 
 /**
- * @class vote controller
- * @description Handles votes
+ * @class CandidateController
+ * @description candidate controller
  *
  */
+
 class VoteController {
   /**
-         * @description Vote
+         * @description votes a candidate
          * @param {object} req - The request object
          * @param {object} res - The response object
          * @return {object} JSON representing data object
-         * @memberof createVote
+         * @memberof voteCandidate
          */
-  static async createVote(req, res) {
-    const { office, candidate } = req.body;
-    const { id: voter } = req.user;
-    const query = `
-    INSERT INTO vote(office, candidate, voter) VALUES($1, $2, $3) RETURNING *`;
-    const params = [office, candidate, voter];
-    try {
-      const { rows } = await client.query(query, params);
-      return res.status(201).json({
-        status: 201,
-        data: [rows[0]],
-      });
-    } catch (error) {
-      return res.status(500).json({
-        status: 500,
-        error: 'Something went wrong with the database',
-      });
-    }
+  static voteCandidate(req, res) {
+    const {
+      office, candidate, voter
+    } = req.body;
+    client.query('INSERT INTO votes(office, candidate, voter) VALUES($1,$2,$3) RETURNING *',
+    [office, candidate, voter], (err, result) => {
+        console.log(office);
+     if (err) {
+       return res.status(400).send({
+         message: err,
+       });
+     }
+     return res.status(201).send({
+       data: [{
+         status: 201,
+         data: result.rows[0].id,
+       }],
+     });
+   });
   }
 }
-
+     
 export default VoteController;

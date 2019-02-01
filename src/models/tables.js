@@ -38,22 +38,21 @@ export const officeTable = `
 `;
 
 export const candidateTable = `
-CREATE TABLE candidate (
+  CREATE TABLE candidates (
     id SERIAL primary key,
     office int references office(id),
     party int references party(id),
     candidate int references users(id),
     registeredAt TIMESTAMP WITH TIME ZONE DEFAULT now()
     );
-    INSERT INTO candidate (office, party, candidate) VALUES ('1', '1', '1');
+    INSERT INTO candidates (office, party, candidate) VALUES (1, 1, 1);
 `;
 
 export const voteTable = `
-CREATE TABLE vote (
-    id SERIAL primary key,
-    createdOn TIMESTAMP WITH TIME ZONE DEFAULT now(),
-    candidate int references candidate(id),
-    office int references office(id),
-    voter int references users(id)
+  CREATE TABLE votes (
+    id SERIAL PRIMARY KEY,
+    office INT REFERENCES office(id) ON DELETE CASCADE,
+    candidate INT REFERENCES candidates(id) ON DELETE CASCADE,
+    voter INT REFERENCES users(id) ON DELETE CASCADE
     );
 `;

@@ -18,7 +18,7 @@ const create = async () => {
     await client.query(candidateTable);
     await client.query(voteTable);
     await client.end();
-    console.log('users, party, office, candidates and vote tables created successfully');
+    console.log('users, party, office, candidates and votes tables created successfully');
     process.exit(0);
   } catch (error) {
     console.log(error);

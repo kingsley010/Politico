@@ -5,6 +5,6 @@ import ValidateUser from '../middlewares/validateUser';
 
 const router = express.Router();
 
-router.post('/votes', AuthUser.verifyUser, VoteController.createVote);
+router.post('/votes', AuthUser.verifyUser, VoteController.voteCandidate);
 
 export default router;
