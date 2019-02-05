@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
+    "start:heroku": "babel-node app.js",
     "build": "babel --presets env src -d dist",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text _mocha --timeout 20000 --require babel-core/register --exit",
     "test:dev": "npm run drop-tables && npm run create-tables && npm run test",
