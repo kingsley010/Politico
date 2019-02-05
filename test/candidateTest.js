@@ -10,18 +10,18 @@ import app from '../app';
 let token;
 
 describe('POST Requests', () => {
-    describe ('POST /api/v1/auth/signup', () => {
+      describe ('POST /api/v1/auth/signup', () => {
         it('should create a new user', (done) => {
           request(app)
             .post('/api/v1/auth/signup')
             .send({
-              firstname: 'Man',
-              lastname: 'Mani',
-              othername: 'Mary',
-              email: 'mmm@gmail.com',
-              phonenumber: '+2341293948040',
-              passporturl: 'mac.jpg',
-              password: 'qwerty',
+              firstname: 'Jessica',
+              lastname: 'Chizoba',
+              othername: 'Zizi',
+              email: 'Jessy@gmail.com',
+              phonenumber: '+234-12345678',
+              passporturl: 'meg.jpg',
+              password: 'meggy',
             })
             .end((err, res) => {
               expect(res.statusCode).to.equal(201);
@@ -43,7 +43,7 @@ describe('POST Requests', () => {
             .send({
               office: 1,
               party: 1,
-              userid: 2
+              userid: 1
             })
             .end((err, res) => {
               expect(res.statusCode).to.equal(201);
@@ -54,49 +54,45 @@ describe('POST Requests', () => {
             done();
             });
         });
-      }); 
+      });
 
-      describe ('POST /api/v1/votes', () => {
-        it('should vote candidate', (done) => {
+      describe ('POST /api/v1/offices/id/register', () => {
+        it('should check if office id exists', (done) => {
           request(app)
-            .post('/api/v1/votes')
+            .post('/api/v1/office/40/register')
             .set('x-auth', token)
             .send({
               office: 1,
-              candidate: 1,
-              voter: 1
-            })
-            .end((err, res) => {
-              expect(res.statusCode).to.equal(201);
-              expect(res.body).to.be.an('object');
-              expect(res.body.data).to.be.an('array');
-              expect(res.body.data[0]).to.be.an('object');
-            if (err) { return done(err); }
-            done();
-            });
-        });
-      }); 
-
-      describe ('POST /api/v1/votes', () => {
-        it('should check if user has voted before', (done) => {
-          request(app)
-            .post('/api/v1/votes')
-            .set('x-auth', token)
-            .send({
-              office: 1,
-              candidate: 1,
-              voter: 1
+              party: 1,
+              userid: 1
             })
             .end((err, res) => {
                 expect(res.statusCode).to.equal(400);
                 expect(res.body).to.be.an('object');
-                expect(res.body).to.deep.equal({ 
-                    status: 400, 
-                    error: 'You have voted before. You cannot vote more than once for the same office' 
-                });
+                expect(res.body).to.deep.equal({ status: 400, error: 'Office id does not exist' });
             if (err) { return done(err); }
             done();
             });
         });
-      }); 
-});
+      });
+
+      describe ('POST /api/v1/parties', () => {
+        it('should check if candidate has already applied for an office', (done) => {
+          request(app)
+            .post('/api/v1/office/1/register')
+            .set('x-auth', token)
+            .send({
+              office: 1,
+              party: 1,
+              userid: 1
+            })
+            .end((err, res) => {
+                expect(res.statusCode).to.equal(409);
+                expect(res.body).to.be.an('object');
+                expect(res.body).to.deep.equal({ status: 409, error: 'Candidate with this id has already applied for an office' });
+            if (err) { return done(err); }
+            done();
+            });
+        });
+      });
+}); 

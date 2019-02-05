@@ -1,8 +1,8 @@
 import client from '../config/dbConnect';
 
 /**
- * @class CandidateController
- * @description candidate controller
+ * @class VoteController
+ * @description vote controller
  *
  */
 
@@ -21,6 +21,7 @@ class VoteController {
     client.query('INSERT INTO votes(office, candidate, voter) VALUES($1,$2,$3) RETURNING *',
     [office, candidate, voter], (err, result) => {
      if (err) {
+       console.log(err);
        return res.status(400).send({
          message: err,
        });
@@ -28,7 +29,7 @@ class VoteController {
      return res.status(201).send({
        data: [{
          status: 201,
-         data: result.rows[0].id,
+         data: result.rows[0].candidate,
        }],
      });
    });

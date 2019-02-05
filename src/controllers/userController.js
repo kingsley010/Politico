@@ -29,17 +29,17 @@ class UserController {
       const values = [firstname, lastname,
         othername, email, phonenumber,
         hashedPassword, passporturl];
-      client.query(query, values, (err, dbRes) => {
+      client.query(query, values, (err, db) => {
         if (err) {
           return res.status(500).json({
             status: 500,
             error: 'Database connection error',
           });
         }
-        const user = dbRes.rows[0];
-        const { id, isAdmin } = user;
-        const token = Helper.generateToken({ isAdmin, id, email });
-        return res.status(201).json({
+        const user = db.rows[0];
+        const { id, isadmin } = user;
+        const token = Helper.generateToken({ isadmin, id, email });
+        return res.header('x-auth', token).status(201).json({
           status: 201,
           data: [{ 
               token, 

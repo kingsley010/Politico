@@ -7,6 +7,7 @@
     "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
     "build": "babel --presets env src -d dist",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text _mocha --timeout 20000 --require babel-core/register --exit",
+    "test:dev": "npm run drop-tables && npm run create-tables && npm run test",
     "coveralls": "nyc npm test && nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls",
     "create-tables": "babel-node src/models/createTables",
     "drop-tables": "babel-node src/models/dropTables"
