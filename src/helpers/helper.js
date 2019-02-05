@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import bcryptjs from 'bcryptjs';
 
 dotenv.config();
-process.env.DB_SECRET = 'hacking';
+
 class Helper {
   static validate() {
     return {
