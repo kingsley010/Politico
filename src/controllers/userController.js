@@ -1,6 +1,6 @@
 import pg from 'pg';
 import Helper from '../helpers/helper';
-import client from '../config/dbConnect';
+import client from '../config/herokuConnect';
 
 
 /**
