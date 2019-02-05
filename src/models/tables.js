@@ -7,7 +7,7 @@ export const userTable = `
     email varchar (30) UNIQUE NOT NULL,
     password varchar (65) NOT NULL,
     phonenumber varchar (14) UNIQUE NOT NULL,
-    passporturl varchar (100) NOT NULL,
+    passporturl varchar (100),
     isadmin varchar (5) DEFAULT 'false',
     registered TIMESTAMP WITH TIME ZONE DEFAULT now(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT now()
