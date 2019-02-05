@@ -5,7 +5,7 @@ import { userTable, partyTable, officeTable, candidateTable, voteTable } from '.
 dotenv.config();
 
 const client = new Client({
-  connectionString: process.env.POSTGRES_URI,
+  connectionString: process.env.DATABASE_URL,
   SSL: true
 });
 

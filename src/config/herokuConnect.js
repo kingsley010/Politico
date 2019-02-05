@@ -2,7 +2,7 @@ import { Client } from 'pg';
 
 // Connecting to heroku postgres
 const client = new Client({
-  connectionString: process.env.POSTGRES_URI,
+  connectionString: process.env.DATABASE_URL,
 });
 client.connect()
   .then(() => ('connected'))
