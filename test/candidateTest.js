@@ -29,7 +29,6 @@ describe('POST Requests', () => {
               expect(res.body.data).to.be.an('array');
               expect(res.body.data[0]).to.be.an('object');
               token = res.body.data[0].token;
-            if (err) { return done(err); }
             done();
             });
         });
@@ -50,7 +49,6 @@ describe('POST Requests', () => {
               expect(res.body).to.be.an('object');
               expect(res.body.data).to.be.an('array');
               expect(res.body.data[0]).to.be.an('object');
-            if (err) { return done(err); }
             done();
             });
         });
@@ -70,7 +68,6 @@ describe('POST Requests', () => {
                 expect(res.statusCode).to.equal(400);
                 expect(res.body).to.be.an('object');
                 expect(res.body).to.deep.equal({ status: 400, error: 'Office id does not exist' });
-            if (err) { return done(err); }
             done();
             });
         });
@@ -90,7 +87,6 @@ describe('POST Requests', () => {
                 expect(res.statusCode).to.equal(409);
                 expect(res.body).to.be.an('object');
                 expect(res.body).to.deep.equal({ status: 409, error: 'Candidate with this id has already applied for an office' });
-            if (err) { return done(err); }
             done();
             });
         });

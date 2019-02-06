@@ -26,7 +26,6 @@ describe('POST Requests', () => {
             expect(res.body.data[0]).to.be.an('object');
             expect(res.body.data[0].user.firstname).to.equal('King');
             token = res.body.data[0].token;
-          if (err) { return done(err); }
           done();
           });
       });
@@ -49,7 +48,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(409);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 409, error: 'email aleady exists, please choose another email' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -71,7 +69,6 @@ describe('POST Requests', () => {
           .end((err, res) => {
             expect(res.statusCode).to.equal(500);
             expect(res.body).to.be.an('object');
-          if (err) { return done(err); }
           done();
           });
       });
@@ -94,7 +91,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 400, error: 'Firstname field is required' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -117,7 +113,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 400, error: 'Please include a valid passport' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -140,7 +135,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 400, error: 'Lastname field is required' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -163,7 +157,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 400, error: 'Email field is required' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -186,7 +179,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 400, error: 'Password field cannot be empty' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -205,7 +197,6 @@ describe('POST Requests', () => {
             expect(res.body).to.be.an('object');
             expect(res.body.data).to.be.an('array');
             expect(res.body.data[0]).to.be.an('object');
-          if (err) { return done(err); }
           done();
           });
       });
@@ -223,7 +214,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(400);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 400, error: 'Email or password is incorrect' });
-          if (err) { return done(err); }
           done();
           });
       });
@@ -241,7 +231,6 @@ describe('POST Requests', () => {
             expect(res.statusCode).to.equal(401);
             expect(res.body).to.be.an('object');
             expect(res.body).to.deep.equal({ status: 401, error: 'Email or password is incorrect' });
-          if (err) { return done(err); }
           done();
           });
       });

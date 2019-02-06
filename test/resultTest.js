@@ -29,7 +29,6 @@ describe('POST Requests', () => {
               expect(res.body.data).to.be.an('array');
               expect(res.body.data[0]).to.be.an('object');
               token = res.body.data[0].token;
-            if (err) { return done(err); }
             done();
             });
         });
@@ -47,7 +46,6 @@ describe('POST Requests', () => {
                     status: 400,
                     error: 'Parameter must be an Integer' 
                 });
-            if (err) { return done(err); }
             done();
             });
         });
@@ -65,7 +63,6 @@ describe('POST Requests', () => {
                     status: 400, 
                     error: 'Office id does not exist' 
                 });
-            if (err) { return done(err); }
             done();
             });
         });
