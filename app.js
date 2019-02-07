@@ -25,8 +25,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Home Route
+app.get('/', (req, res) => {
+	const mssg = "<p> Welcome to Politico. </p>";
+	res.status(200).send(mssg);
+}); 
+
 app.get('/api/v1', (req, res) => {
-	const mssg = "<p> Welcome to Politico. Politico enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency. </p>";
+	const mssg = "<p> Politico enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency. </p>";
 	res.status(200).send(mssg);
 }); 
 
