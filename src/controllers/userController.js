@@ -24,7 +24,7 @@ class UserController {
     const hashedPassword = Helper.hashPassword(password);
 
     try {
-      const query = `INSERT INTO users(firstname, lastname, othername, email, phonenumber, password, passporturl) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *`;
+    const query = `INSERT INTO users(firstname, lastname, othername, email, phonenumber, password, passporturl) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING (firstname, lastname, othername, email, phonenumber, passporturl)`;
       const values = [firstname, lastname,
         othername, email, phonenumber,
         hashedPassword, passporturl];
@@ -72,7 +72,7 @@ class UserController {
             const user = {
               isadmin:  dbRes.rows[0].isadmin,
               id:  dbRes.rows[0].id,
-              
+
             }
             //dbRes.rows[0];
             const token = Helper.generateToken(user);
