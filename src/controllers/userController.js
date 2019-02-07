@@ -69,8 +69,13 @@ class UserController {
         if (dbRes.rows[0]) {
           const getPassword = Helper.hashPassword(password, dbRes.rows[0].password);
           if (getPassword) {
-            const user = dbRes.rows[0];
-            const token = Helper.generateToken(req.body);
+            const user = {
+              isadmin:  dbRes.rows[0].isadmin,
+              id:  dbRes.rows[0].id,
+              
+            }
+            //dbRes.rows[0];
+            const token = Helper.generateToken(user);
             return res.status(200).json({
               status: 200,
               data: [{

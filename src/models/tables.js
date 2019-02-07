@@ -13,6 +13,7 @@ export const userTable = `
     updated TIMESTAMP WITH TIME ZONE DEFAULT now()
   );
   INSERT INTO users (firstname, lastname, othername, email, password, phonenumber, passporturl, isadmin) VALUES ('kaka', 'perfect', 'macho', 'kaks@gmail.com', '$2y$12$G4/WuYEvc49yA3BwVfgeEeWyKgF2MgHz26aLx7BzEskW7eC8YhCRK', '12345678901', 'kaks.jpg', 'true');
+  INSERT INTO users (firstname, lastname, othername, email, password, phonenumber, passporturl, isadmin) VALUES ('king', 'mike', 'Kaks', 'kamsy@gmail.com', '$2y$12$G4/WuYEvc49yA3BwVfgeEeWyKgF2MgHz26aLx7BzEskW7eC8YhCRK', '12345678586', 'kaks.jpg', 'true');
 
   `;
 
@@ -45,6 +46,7 @@ export const candidateTable = `
     userid INT REFERENCES users(id) ON DELETE CASCADE,
     registeredAt TIMESTAMP WITH TIME ZONE DEFAULT now()
     );
+    INSERT INTO candidates (office, party, userid) VALUES (1, 1, 1);
 `;
 
 export const voteTable = `

@@ -54,27 +54,6 @@ describe('POST Requests', () => {
     });
 
     describe ('POST /api/v1/auth/signup', () => {
-      it('should catch an existing phone number', (done) => {
-        request(app)
-          .post('/api/v1/auth/signup')
-          .send({
-            firstname: 'Kingsley',
-            lastname: 'Perfect',
-            othername: 'Kaka',
-            email: 'boy@gmail.com',
-            phonenumber: '10987654321',
-            password: 'qwertyuiop',
-            passporturl: 'kaks.jpg',            
-          })
-          .end((err, res) => {
-            expect(res.statusCode).to.equal(500);
-            expect(res.body).to.be.an('object');
-          done();
-          });
-      });
-    });
-
-    describe ('POST /api/v1/auth/signup', () => {
       it('should test for an empty firstname field', (done) => {
         request(app)
           .post('/api/v1/auth/signup')

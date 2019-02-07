@@ -7,44 +7,66 @@ import chai, { expect } from 'chai';
 import request from 'supertest';
 import app from '../app';
 
-let token;
+let admintoken;
 
 describe('POST Requests', () => {
-      describe ('POST /api/v1/auth/signup', () => {
-        it('should create a new user', (done) => {
+      describe ('POST /api/v1/auth/login', () => {
+        it('should sign in a user', (done) => {
           request(app)
-            .post('/api/v1/auth/signup')
+            .post('/api/v1/auth/login')
             .send({
-              firstname: 'Jessica',
-              lastname: 'Chizoba',
-              othername: 'Zizi',
-              email: 'Jessy@gmail.com',
-              phonenumber: '+234-12345678',
-              passporturl: 'meg.jpg',
-              password: 'meggy',
+              email: 'kaks@gmail.com',
+              password: 'kaka',
             })
             .end((err, res) => {
-              expect(res.statusCode).to.equal(201);
+              expect(res.statusCode).to.equal(200);
               expect(res.body).to.be.an('object');
               expect(res.body.data).to.be.an('array');
               expect(res.body.data[0]).to.be.an('object');
-              token = res.body.data[0].token;
+              admintoken = res.body.data[0].token;
+              console.log('admintoken', admintoken);
+            if (err) { return done(err); }
             done();
             });
         });
       });
 
+      // describe ('POST /api/v1/auth/signup', () => {
+      //   it('should create a new user', (done) => {
+      //     request(app)
+      //       .post('/api/v1/auth/signup')
+      //       .send({
+      //         firstname: 'Jessica',
+      //         lastname: 'Chizoba',
+      //         othername: 'Zizi',
+      //         email: 'Jessy@gmail.com',
+      //         phonenumber: '+234-12345678',
+      //         passporturl: 'meg.jpg',
+      //         password: 'meggy',
+      //       })
+      //       .end((err, res) => {
+      //         expect(res.statusCode).to.equal(201);
+      //         expect(res.body).to.be.an('object');
+      //         expect(res.body.data).to.be.an('array');
+      //         expect(res.body.data[0]).to.be.an('object');
+      //         token = res.body.data[0].token;
+      //       done();
+      //       });
+      //   });
+      // });
+
       describe ('POST /api/v1/offices/id/register', () => {
         it('should create a new candidate', (done) => {
           request(app)
             .post('/api/v1/office/1/register')
-            .set('x-auth', token)
+            .set('x-auth', admintoken)
             .send({
               office: 1,
               party: 1,
-              userid: 1
+              userid: 2
             })
             .end((err, res) => {
+              console.log(res.body);
               expect(res.statusCode).to.equal(201);
               expect(res.body).to.be.an('object');
               expect(res.body.data).to.be.an('array');
@@ -58,7 +80,7 @@ describe('POST Requests', () => {
         it('should check if office id exists', (done) => {
           request(app)
             .post('/api/v1/office/40/register')
-            .set('x-auth', token)
+            .set('x-auth', admintoken)
             .send({
               office: 1,
               party: 1,
@@ -77,7 +99,7 @@ describe('POST Requests', () => {
         it('should check if candidate has already applied for an office', (done) => {
           request(app)
             .post('/api/v1/office/1/register')
-            .set('x-auth', token)
+            .set('x-auth', admintoken)
             .send({
               office: 1,
               party: 1,

@@ -34,26 +34,6 @@ describe('POST Requests', () => {
         });
       });
 
-      describe ('POST /api/v1/offices/id/register', () => {
-        it('should create a new candidate', (done) => {
-          request(app)
-            .post('/api/v1/office/1/register')
-            .set('x-auth', token)
-            .send({
-              office: 1,
-              party: 1,
-              userid: 2
-            })
-            .end((err, res) => {
-              expect(res.statusCode).to.equal(201);
-              expect(res.body).to.be.an('object');
-              expect(res.body.data).to.be.an('array');
-              expect(res.body.data[0]).to.be.an('object');
-            done();
-            });
-        });
-      }); 
-
       describe ('POST /api/v1/votes', () => {
         it('should vote candidate', (done) => {
           request(app)

@@ -46,8 +46,9 @@ export default class AuthUser {
         if (err) {
             return res.status(401).send(err);
         }
-        if (decoded.isadmin === 'false') {
-            return req.isadmin = decoded.isadmin;
+        if (decoded.isadmin === 'true') {
+            req.isadmin = decoded.isadmin;
+            return next();
         }
         else {
             return res.status(401).send({
@@ -60,6 +61,5 @@ export default class AuthUser {
             const err = { status: 403, message: 'Admin verification failed' };
              return res.status(403).send(err);
     }
-    next();
   }
 }
