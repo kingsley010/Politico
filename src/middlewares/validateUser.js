@@ -1,5 +1,5 @@
 import Helper from '../helpers/helper';
-import client from '../config/herokuConnect';
+import client from '../config/dbConnect';
 
 /**
  * @class ValidateUser

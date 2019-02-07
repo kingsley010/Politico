@@ -1,4 +1,4 @@
-import client from '../config/herokuConnect';
+import client from '../config/dbConnect';
 
 /**
  * @class CandidateController
