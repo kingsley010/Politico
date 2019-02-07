@@ -8,4 +8,5 @@ client.connect()
   .then(() => ('connected'))
   .catch(err => ('Cannot connect to database'));
 
+// Exporting client
 module.exports = client;
