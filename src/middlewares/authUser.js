@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import Helper from '../helpers/helper';
 
 /**
  * @class AuthUser

@@ -1,7 +1,6 @@
 import express from 'express';
 import VoteController from '../controllers/voteController';
 import AuthUser from '../middlewares/authUser';
-import ValidateUser from '../middlewares/validateUser';
 import ValidateVote from '../middlewares/validateVotes';
 
 const router = express.Router();
