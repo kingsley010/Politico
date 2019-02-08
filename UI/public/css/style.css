@@ -877,6 +877,11 @@ hr {
     text-align: left;
 }
 
+.unordered-list-here {
+    text-align: left;
+    padding: 30px;
+}
+
 .unordered-list-profyl {
     text-align: left;
     padding: 28px;
