@@ -7,7 +7,6 @@
     <title>new_party - Politico</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 
@@ -25,20 +24,25 @@
   </header>
     
     
-    <form class="login-form-admin" action="profile.html" method="POST">
-    
+    <form class="login-form-admin" id="newparty" action="profile.html" method="POST">
+        <div id="error"></div><br>
         <h2 id="new-party-header"> Create new party</h2>
         <div>
             <label for="uname">Party Name</label>
-            <input class="form-input" type="text" placeholder="Enter partyname" name="uname" required>
+            <input class="form-input" type="text" id="name" placeholder="Enter partyname" name="uname" required>
+            <div id="error-name"></div><br>
 
-            <label for="psw">Description</label>
-            <input class="form-input" type="password" placeholder="Type party full name" name="psw" required>
-
+            <label for="psw">Address</label>
+            <input class="form-input" type="text" id="hqAddress" placeholder="Address" name="psw" required>
+            <div id="error-hqAddress"></div>
+            
             <button class="form-butt" type="submit">submit</button>
         </div>
 
     </form>
         
+    <script src="../public/js/toggle.js"></script>
+    <script src="../scripts/fetch/fetch.js"></script>
+    <script src="../scripts/fetch/new_party.js"></script>
 </body>
 </html>

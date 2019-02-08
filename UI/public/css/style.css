@@ -44,11 +44,11 @@ hr {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    width: 100%;
+    width: 30%;
     cursor: pointer;
     border-radius: 2px;
-    margin-left: -900px;
-    margin-top: 35px;
+    margin-left: 200px;
+    margin-top: 80px;
 }
 
 #create_office {
@@ -77,6 +77,7 @@ hr {
     float: right;
     margin-right: 20px;
     border-spacing: 10px;
+
 }
 
 .form-d {
@@ -108,7 +109,6 @@ hr {
     padding-bottom: 20px;
     border: 20px;
 }
-
 
 .form-button:hover {
     opacity: 0.8;
@@ -272,7 +272,7 @@ hr {
 
 @media screen and (max-width: 650px) {
   .header-right {
-    float: none;
+    float: left;
   }
     .header__link:not(.header-logo) {
         display: none;
@@ -280,6 +280,7 @@ hr {
     .header__menu-icon {
         display: block;
         float: right;
+        margin-top: 20px;
     }
     
     .header--responsive {
@@ -295,14 +296,17 @@ hr {
         display: block;
         text-align: left;
     }
+    #ul {
+        padding: 15px;
+    }
     .form-b {
         background-color: #07c;
         color: white;
         font-size: 15px;
         float: right;
-        margin-right: 80px;
-        margin-top: 20px;
-        border-spacing: 10px;
+        margin-right: 10px;
+        margin-top: 5px;
+        border-spacing: 5px;
     }
     
     
@@ -311,10 +315,11 @@ hr {
         color: white;
         font-size: 15px;
         float: right;
-        margin-right: 20px;
-        margin-bottom: 20px; 
-        border-spacing: 10px;
+        margin-right: 2px;
+        margin-top: 5px; 
+        border-spacing: 5px;
     }
+   
 }
 /*Styling for header ends*/
 
@@ -382,7 +387,8 @@ hr {
     border-radius: 25px;
     color: #07c;
     font-weight: bold;
-    margin-right: 200px;
+    margin-right: 850px;
+    margin-top: -480px;
 }
 
 .jumbotron__link:last-of-type {
@@ -412,6 +418,7 @@ hr {
     
     .jumbotron__info {
         margin-bottom: 15%;
+        margin-left: 20px;
     }
     .aboutus {
         display: block;
@@ -496,6 +503,25 @@ hr {
     }
     .signup-form {
         width: 80%;
+    }
+    #signup-div {
+        width: 200%;
+        margin-left: -180px;
+        margin-top: -30px;
+    }
+    #signin-div {
+        margin-top: 70px;
+    }
+    .header {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .form-button-vote {
+        margin-left: 150px;
+    }
+    .login-form-admin {
+        width: 80%;
+        margin-top: 100px;
     }
 }
 /*Styling for login page ends*/
@@ -748,7 +774,10 @@ hr {
     .question-comments-container {
         padding-left: 1.5em;
     }
-}
+    .user-popular-questions-cont {
+        margin-top: 150px;
+    }
+}    
 /*Styling for single question page ends*/
 
 
@@ -818,12 +847,18 @@ hr {
 }
 
 .user-photo {
-    margin-top: 100px;
-    margin-bottom: -50px;
+    /* margin-top: 20px;
+    margin-bottom: 0px; */
     border: 5px gainsboro solid;
     width: 200px;
     height: 200px;
     border-radius: 30px;
+}
+
+.user-photo-profyl {
+    float: right;
+    padding-right: 80px;
+    padding-top: 20px;
 }
 
 .user-detail__h2 {
@@ -840,6 +875,24 @@ hr {
 
 .unordered-list {
     text-align: left;
+}
+
+.unordered-list-profyl {
+    text-align: left;
+    padding: 28px;
+}
+
+.unordered-list-profyl li {
+    list-style-type: none;
+}
+
+.unordered-list-profyl li a {
+    color: #07c;
+    font-weight: bold;
+}
+
+.unordered-list-profyl a {
+    text-decoration: none;
 }
 
 .unordered-list1 {
@@ -907,6 +960,17 @@ hr {
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
+.profile-lar-container {
+    padding: 5em 2em 1em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    padding-bottom: 150px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+
 .profile-ma-container {
     padding: 1em 2em 1em 2em;
     display: grid;
@@ -926,9 +990,7 @@ hr {
 }
 
 .profile-za-container {
-    padding: 5em 2em 1em 2em;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
+    margin: 0 20% 0 20% ;
 }
 
 .profile-ka-container {
@@ -937,6 +999,16 @@ hr {
     grid-template-columns: 25% 25% 25% 25%;
     background-color: white; 
     border: 20px;
+    box-shadow: 0 1px 1px rgba(57,73,76,0.35);
+}
+
+.profile-car-container {
+    padding: 1em 2em 7em 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white; 
+    border: 20px;
+    margin-top: -250px;
     box-shadow: 0 1px 1px rgba(57,73,76,0.35);
 }
 
@@ -1003,6 +1075,21 @@ hr {
         text-align: center;
       }
 
+    .profile-car-container {
+        display: block;
+        text-align: center;
+      } 
+
+    .profile-lar-container {
+        display: block;
+        text-align: center;
+      }  
+     
+    .profile-a-container {
+        display: block;
+        text-align: center;
+      } 
+
     .profile-pa-container {
         display: block;
         text-align: center;
@@ -1037,10 +1124,33 @@ hr {
       #footer_logger {
           text-align: center;
       }
+
+      #footer_logg {
+        text-align: center;
+        background-color: white;
+    }
+
+      .aboutus {
+        display: block;
+      }
+
+      .about-container {
+        display: none;
+     }
+
+     .profile-za-container {
+        margin: 5% 5%;
+        padding: 5% 5%
+     }
 }
 
 #footer_logger {
     text-align: center;
+}
+
+#footer_logg {
+    text-align: center;
+    background-color: white;
 }
 
 .profile-container__h2 {
@@ -1113,7 +1223,7 @@ hr {
 }
 
 .party_logo {
-    width: 200px;
+    width: 228px;
 }
 
 .party_logo1 {
@@ -1128,13 +1238,41 @@ hr {
     width: 270px;
     align-items: center;
 }
-
+.party_logo-1 {
+    width: 100px;
+    float: right;
+    margin-right: 30px;
+}
+.party_logo-2 {
+    width: 80px;
+    float: right;
+    margin-right: 30px;
+}
+.party_logo-3 {
+    width: 80px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+.party_logo-4 {
+    width: 100px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
 .profile-container__h3 {
     font-weight: bold;
     text-align: center;
     font-size: 40px;
 }
+
 .user-recent-question-container {
+    border-right: 1px solid #efefef;
+    padding: 1em;
+    text-align: center;
+}
+
+.user-recent-question-containerD {
     border-right: 1px solid #efefef;
     padding: 1em;
     text-align: center;
@@ -1155,6 +1293,15 @@ hr {
 }
 
 .user-recent-question, .user-popular-question {
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.user-recent-questionD {
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     padding-top: 0.1em;
     padding-bottom: 0.1em;
@@ -1266,10 +1413,13 @@ hr {
     text-align: center;
 }
 
-.user-popular-questions-container-office {
+.user-popular-questions-cont {
     padding: 1em;
     text-align: center;
-    margin-top: -60px;
+}
+
+.user-popular-questions-container-office {
+    text-align: center;
 }
 
 #new-party-header {
@@ -1294,6 +1444,11 @@ hr {
     text-align: center;
 }
 
+#footers {
+    padding: 10px;
+    text-align: center;
+}
+
 #footer_logged {
     padding: 20px;
     text-align: center;
@@ -1307,6 +1462,8 @@ hr {
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 100px;
+    margin-top: -300px;
+    border: 20px;
     background-color: rgb(89, 231, 148);
 }
 
@@ -1320,4 +1477,47 @@ hr {
 .about__h2 {
     text-align: center;
     color:#008aff;
+}
+
+.about-one {
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 10px;
+    padding-bottom: 0.1em;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.about-two {
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    padding: 10px;
+    padding-bottom: 0.1em;
+    margin-bottom: 1em;
+    border-radius: 2px;
+    background-color: white;
+}
+
+#error-fname, #error-lname, #error-ename, #error-pname, #error-psw, #error-cpsw {
+    color: red;
+}
+
+#error-email, #error-password, #error-name, #error-hqAddress {
+    color: red;
+}
+
+#error {
+    color: green;
+}
+
+#kaks {
+    color: #07c;
+    font-weight: bold;
+}
+
+#pam {
+    font-weight: bold;
+}
+
+#pam li {
+    font-weight: bold;
 }

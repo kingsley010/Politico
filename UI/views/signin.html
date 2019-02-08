@@ -7,7 +7,6 @@
     <title>signin - Politico</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 
@@ -23,30 +22,34 @@
       </div>
   </header>
 
-
-    <form class="login-form" action="profile.html" method="POST">
+  <div id="signin-div">
+    <form class="login-form" id="signin">
 
 
         <div>
             <h2 class="form-text-header"> SIGN IN </h2>
 
-            <label for="uname">Username</label>
-            <input class="form-input" type="text" placeholder="Enter Username" name="uname">
-
+            <label for="uname">Email</label>
+            <input class="form-input" type="text" id="email" placeholder="Enter email" name="uname">
+            <div id="error-email"></div><br>
             <label for="psw">Password</label>
-            <input class="form-input" type="password" placeholder="Enter Password" name="psw">
-
-            <button class="form-button" type="submit">Login</button>
+            <input class="form-input" type="password" id="password" placeholder="Enter Password" name="psw">
+            <div id="error-password"></div>
+            
         </div>
-
+        <a href="logged.html"><button class="form-button" type="submit">Login</button></a>
         <div class="account">
-            <span>Don't have an account?</span> <a href="signup.html">signup</a>   
+            <span>Don't have an account?</span> <a id="kaks" href="signup.html">signup</a>   
         </div>
         <hr>
         <div class="account">
-            <a href="reset_password.html">forgot password?</a>   
+            <a id="kaks" href="reset_password.html">forgot password?</a>   
         </div>
     </form>
+  </div>
 
+  <script src="../public/js/toggle.js"></script>
+  <script src="../scripts/fetch/fetch.js"></script>
+  <script src="../scripts/fetch/signin.js"></script> 
 </body>
 </html> 

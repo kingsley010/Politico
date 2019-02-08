@@ -6,7 +6,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Politico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
     
@@ -16,6 +15,8 @@
                   <a class="header_link header-logo" href="logged.html"><span id="politico">Politico</span></a>
                   <span class="header-right">
                     <a class="header__link" href="logged.html">HOME</a>
+                    <a class="header__link" href="office.html">RUN FOR OFFICE</a>
+                    <a class="header__link" href="vote.html">VOTE</a>
                     <a class="header__link" href="profile.html">PROFILE</a>
                     <a class="header__link" href="../index.html">LOGOUT</a>
                     <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
@@ -28,7 +29,7 @@
                     <h2 class="profile-container__h2">Parties</h2>
                     <div class="user-recent-question">
                     <div class="unordered-list">
-                        <ul>
+                        <ul id="pam">
                             <lI>APC</lI><br>
                             <lI>PDP</lI><br>
                             <lI>APGA</lI><br>
@@ -47,7 +48,7 @@
                     
                     <div class="user-popular-question">
                             <div class="unordered-list">
-                                    <ul>
+                                    <ul id="pam">
                                         <lI>Presidency</lI><br>
                                         <lI>Governor</lI><br>
                                         <lI>Senate</lI><br>
@@ -61,8 +62,7 @@
             </div>
 
             <div id="want">
-                <h2>Want to run for an office?</h2>
-                <h3>Declare your interest <a href="office.html">here</a><h3>
+                <h2>CANDIDATES</h2>
             </div>
 
             <div class="profile-ma-container">
@@ -71,10 +71,10 @@
                         <div class="user-recent-question">
                         <div class="unordered-list">
                             <ul>
-                                <lI>APGA - Donald Duke</lI><br>
-                                <lI>APC - Muhammadu Buhari</lI><br>
-                                <lI>PDP - Atiku Abubakar</lI><br>
-                                <lI>ANN - Fela Durotoye</lI><br>
+                                <lI><span id="pam">APGA</span> - Donald Duke</lI><br>
+                                <lI><span id="pam">APC</span> - Muhammadu Buhari</lI><br>
+                                <lI><span id="pam">PDP</span> - Atiku Abubakar</lI><br>
+                                <lI><span id="pam">ANN</span> - Fela Durotoye</lI><br>
                             </ul>
                         </div>
                         
@@ -89,10 +89,10 @@
                         <div class="user-popular-question">
                                 <div class="unordered-list">
                                         <ul>
-                                            <lI>APGA - Harrison Obi</lI><br>
-                                            <lI>APC - Ifechukwu Ozoemena</lI><br>
-                                            <lI>PDP - Emmanuel Maduka</lI><br>
-                                            <lI>ANN - Chinedu Okoye</lI><br>
+                                            <lI><span id="pam">APGA</span> - Harrison Obi</lI><br>
+                                            <lI><span id="pam">APC</span> - Ifechukwu Ozoemena</lI><br>
+                                            <lI><span id="pam">PDP</span> - Emmanuel Maduka</lI><br>
+                                            <lI><span id="pam">ANN</span> - Chinedu Okoye</lI><br>
                                         </ul>
                                     </div>
                        
@@ -100,21 +100,16 @@
                     </div>
                 </div>
 
-                <div id="want">
-                        <h2>Are you eligible to vote?</h2>
-                        <h3>Vote for your candidate of choice <a href="vote.html">here</a><h3>
-                    </div>
-
                 <div class="profile-ma-container">
                         <div class="user-recent-question-container">
                             <h2 class="profile-container__h2">House Of Reps Candidates</h2>
                             <div class="user-recent-question">
                             <div class="unordered-list">
                                 <ul>
-                                    <lI>APGA - Orji Uzor</lI><br>
-                                    <lI>APC - Maduka Emmanuel</lI><br>
-                                    <lI>PDP - Charles Okafor</lI><br>
-                                    <lI>ANN - Akpan Albert</lI><br>
+                                    <lI><span id="pam">APGA</span> - Orji Uzor</lI><br>
+                                    <lI><span id="pam">APC</span> - Maduka Emmanuel</lI><br>
+                                    <lI><span id="pam">PDP</span> - Charles Okafor</lI><br>
+                                    <lI><span id="pam">ANN</span> - Akpan Albert</lI><br>
                                 </ul>
                             </div>
                             
@@ -129,10 +124,10 @@
                             <div class="user-popular-question">
                                     <div class="unordered-list">
                                             <ul>
-                                                <lI>APGA - Chinenye Emmanuel</lI><br>
-                                                <lI>APC - Olamide Adeboye</lI><br>
-                                                <lI>PDP - Samuel Oyedepo</lI><br>
-                                                <lI>ANN - David Alexis</lI><br>
+                                                <lI><span id="pam">APGA</span> - Chinenye Emmanuel</lI><br>
+                                                <lI><span id="pam">APC</span> - Olamide Adeboye</lI><br>
+                                                <lI><span id="pam">PDP</span> - Samuel Oyedepo</lI><br>
+                                                <lI><span id="pam">ANN</span> - David Alexis</lI><br>
                                             </ul>
                                         </div>
                            
@@ -145,6 +140,6 @@
             &copy; Copyright 2019
     </div>
 
-<script src="js/toggle.js"></script>
+<script src="../public/js/toggle.js"></script>
 </body>
 </html>

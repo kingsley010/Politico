@@ -6,23 +6,23 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>admin - Politico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
     
 <body id="body">
         <header class="header1">
                 <div class="header-links" id="header__div">
-                  <a class="header_link header-logo" href="logged.html"><span id="politico">Politico</span></a>
+                  <a class="header_link header-logo" href="admin.html"><span id="politico">Politico</span></a>
                   <span class="header-right">
                     <a class="header__link" href="logged.html">HOME</a>
+                    <a class="header__link" href="new_party.html">CREATE NEW PARTY</a>
                     <a class="header__link" href="profile.html">PROFILE</a>
                     <a class="header__link" href="../index.html">LOGOUT</a>
                     <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
                   </span>
                 </div>
         </header>
-    
+        
         <div class="profile-pa-container">
                         <div class="user-recent-question-container">
                             <h2 class="profile-container--h2">APGA</h2>
@@ -100,25 +100,21 @@
                                             </div>
                                
                             </div>
-                            <button class="form-admin"><a href="new_party.html"><span class="form-admin-a">Create new party</span></a></button>
+        
                             </div>
                     </div>
 
                     <hr>
 
                 <div class="profile-za-container">
-                            <div>                                
-                                <div>
-                                        <div></div>
-                               </div>
-                            </div>
+                            
 
                             <div class="user-popular-questions-container-office">
                                         <h2 class="profile-container__h2">Offices</h2>
                                         
                                         <div class="user-popular-question">
                                                 <div class="unordered-list">
-                                                        <ul>
+                                                        <ul id="ul">
                                                             <lI>Presidency
                                                                     <span><button class="form-b" type="submit">Delete</button></span> 
                                                                     <span><button class="form-c" type="submit">Edit</button></span>
@@ -152,6 +148,6 @@
             &copy; Copyright 2019
     </div>
 
-<script src="js/toggle.js"></script>
+<script src="../public/js/toggle.js"></script>
 </body>
 </html>

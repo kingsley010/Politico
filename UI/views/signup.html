@@ -7,8 +7,8 @@
     <title>signup - Politico</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+
 </head>
 
 <body class="naija">
@@ -18,13 +18,14 @@
         <span class="header-right">
           <a class="header__link" href="../index.html">HOME</a>
           <a class="header__link" href="signin.html">LOGIN</a>
+          <a href="javascript:void(0);" onclick="toggleMenu()" class="header__menu-icon">&#9776;</a>
         </span>
       </div>
   </header>
 
 
-    <div>
-            <form class="signup-form" action="profile.html" method="POST">
+    <div id="signup-div">
+            <form class="signup-form" id="signup">
 
 
                     <div>
@@ -33,26 +34,21 @@
 
                         <p class="form-text">Already have an account? <a href="signin.html">Login instead!</a></p><br>
 
-                        <input class="form-input" type="text" placeholder="Firstname" name="fname">
-
-                        <input class="form-input" type="text" placeholder="Lastname" name="lname">
-
-                        <input class="form-input" type="text" placeholder="Othernames" name="Oname">
-
-                        <input class="form-input" type="text" placeholder="Email" name="ename">
-
-                        <input class="form-input" type="text" placeholder="Phonenumber" name="pname">
-
-                        <input class="form-input" type="text" placeholder="Usernmae" name="Uname">
-
-                        <input class="form-input" type="password" placeholder="Password" name="psw">
-
-                        <input class="form-input" type="password" placeholder="Confirm Password" name="psw">
-
-
-                        <button class="form-button" type="submit">Create account</button>
+                        <input class="form-input" type="text" id="firstname" placeholder="Firstname" name="fname">
+                        <div id="error-fname"></div>
+                        <input class="form-input" type="text" id="lastname" placeholder="Lastname" name="lname">
+                        <div id="error-lname"></div>
+                        <input class="form-input" type="text" id="email" placeholder="Email" name="ename">
+                        <div id="error-ename"></div>
+                        <input class="form-input" type="text" id="phonenumber" placeholder="Phonenumber" name="pname">
+                        <div id="error-pname"></div>
+                        <input class="form-input" type="password" id="password" placeholder="Password" name="psw">
+                        <div id="error-psw"></div>
+                        <input class="form-input" type="password" id="cpassword" placeholder="Confirm Password" name="psw">
+                        <div id="error-cpsw"></div>
+                        
                     </div>
-
+                    <a href="logged.html"><button class="form-button" type="submit">Create account</button></a>
                     <div class="account">
                         <p>By creating an account, you have agreed to our Terms & Conditions</p>  
                     </div>
@@ -60,6 +56,8 @@
 
 
     </div>    
-
+    <script src="../public/js/toggle.js"></script>
+    <script src="../scripts/fetch/fetch.js"></script>
+    <script src="../scripts/fetch/signup.js"></script>
 </body>
 </html> 
