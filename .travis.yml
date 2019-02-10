@@ -3,7 +3,7 @@ env:
     - CC_TEST_REPORTER_ID=a1a9639adca6daa0477c44b63cc8e700a8a577c2a4ef7326c16bf44a06d09a61
 language: node_js
 node_js:
-  - 10.15
+  - 10.15.0
 notifications:
   email: false
 before_script:
