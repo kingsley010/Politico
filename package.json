@@ -1,7 +1,7 @@
 {
   "name": "politico",
   "version": "1.0.0",
-  "description": "a platform that enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.",
+  "description": " platform that enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency.",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
