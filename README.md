@@ -27,7 +27,7 @@ Thirdly, make sure you have a text editor like sublimetext, visual studio, atom 
 
 # Installing
 
-Installing the application is a quite easy. After cloning the repository to your local computer with the "git clone" command e.g. git clone https://github.com/perfect090/Politico.git. Change directory into the folder on your most preferred terminal, let's say git bash and run the command: <strong>npm install</strong>. This will install all the dependencies and development dependencies on your local machine.</br></br>
+Installing the application is a quite easy. After cloning the repository to your local computer with the "git clone" command e.g. git clone https://github.com/kingsley010/Politico.git. Change directory into the folder on your most preferred terminal, let's say git bash and run the command: <strong>npm install</strong>. This will install all the dependencies and development dependencies on your local machine.</br></br>
 Once the installation has been completed, the server can be started with the <strong>npm start</strong> command which runs the start script (nodemon app.js --exec babel-node --presets babel-preset-env) in the package.json file.</br></br>
 The same process can be used in running the tests by typing the command: <strong>npm start</strong> which runs the test script in the package.json file.
 
