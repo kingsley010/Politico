@@ -5,9 +5,16 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
+    "start:heroku": "babel-node app.js",
     "build": "babel --presets env src -d dist",
-    "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text _mocha --timeout 10000 --require babel-core/register --exit",
-    "coveralls": "nyc npm test && nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls"
+    "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text _mocha --timeout 20000 --require babel-core/register --exit",
+    "test:dev": "npm run drop-tables && npm run create-tables && npm run test",
+    "coveralls": "nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls",
+    "create-tables": "babel-node src/models/createTables",
+    "drop-tables": "babel-node src/models/dropTables",
+    "create-ptables": "babel-node src/models/createPostgresTables",
+    "drop-ptables": "babel-node src/models/dropPostgresTables",
+    "post-gres": "npm run drop-ptables && npm run create-ptables"
   },
   "repository": {
     "type": "git",
@@ -39,12 +46,17 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.4.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "pg": "^7.8.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

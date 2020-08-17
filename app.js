@@ -26,7 +26,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Home Route
 app.get('/', (req, res) => {
-	const mssg = "<p> Welcome to Politico. Politico enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency. </p>";
+	const mssg = "<p> Welcome to Politico. </p>";
+	res.status(200).send(mssg);
+}); 
+
+app.get('/api/v1', (req, res) => {
+	const mssg = "<p> Politico enables citizens give their mandate to politicians running for different government offices while building trust in the process through transparency. </p>";
 	res.status(200).send(mssg);
 }); 
 
@@ -35,6 +40,14 @@ import party from './src/routes/partyRoutes';
 app.use('/api/v1', party);
 import office from './src/routes/officeRoutes';
 app.use('/api/v1', office);
+import auth from './src/routes/userRoutes';
+app.use('/api/v1', auth);
+import candidate from './src/routes/candidateRoute';
+app.use('/api/v1', candidate);
+import vote from './src/routes/voteRoute';
+app.use('/api/v1', vote);
+import result from './src/routes/resultRoute';
+app.use('/api/v1', result);
 
 app.use((req, res, next) => {
 	const error = new Error('Not Found');
