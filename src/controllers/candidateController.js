@@ -1,5 +1,3 @@
-import pg from 'pg';
-import 'babel-polyfill';
 import client from '../config/dbConnect';
 
 /**
@@ -18,10 +16,10 @@ class CandidateController {
   */
   static registerCandidate(req, res) {
     const {
-      office, party, candidate,
+      office, party, userid,
     } = req.body;
-    client.query('INSERT INTO candidates(office, party, candidate) VALUES($1,$2,$3) RETURNING *',
-    [office, party, candidate], (err, result) => {
+    client.query('INSERT INTO candidates(office, party, userid) VALUES($1,$2,$3) RETURNING *',
+    [office, party, userid], (err, result) => {
      if (err) {
        return res.status(400).send({
          message: err,
@@ -30,7 +28,7 @@ class CandidateController {
      return res.status(201).send({
        data: [{
          status: 201,
-         data: result.rows[0].id,
+         data: result.rows[0],
        }],
      });
    });

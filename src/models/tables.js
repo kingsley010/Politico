@@ -7,12 +7,12 @@ export const userTable = `
     email varchar (30) UNIQUE NOT NULL,
     password varchar (65) NOT NULL,
     phonenumber varchar (14) UNIQUE NOT NULL,
-    passporturl varchar (100) UNIQUE NOT NULL,
-    isAdmin varchar (5) DEFAULT 'false',
+    passporturl varchar (100) NOT NULL,
+    isadmin varchar (5) DEFAULT 'false',
     registered TIMESTAMP WITH TIME ZONE DEFAULT now(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT now()
   );
-  INSERT INTO users (firstname, lastname, othername, email, password, phonenumber, passporturl, isAdmin) VALUES ('kaka', 'perfect', 'macho', 'kaks@gmail.com', '$2y$12$G4/WuYEvc49yA3BwVfgeEeWyKgF2MgHz26aLx7BzEskW7eC8YhCRK', '12345678901', 'kaks.jpg', 'true');
+  INSERT INTO users (firstname, lastname, othername, email, password, phonenumber, passporturl, isadmin) VALUES ('kaka', 'perfect', 'macho', 'kaks@gmail.com', '$2y$12$G4/WuYEvc49yA3BwVfgeEeWyKgF2MgHz26aLx7BzEskW7eC8YhCRK', '12345678901', 'kaks.jpg', 'true');
 
   `;
 
@@ -40,12 +40,11 @@ export const officeTable = `
 export const candidateTable = `
   CREATE TABLE candidates (
     id SERIAL primary key,
-    office int references office(id),
-    party int references party(id),
-    candidate int references users(id),
+    office int references office(id) ON DELETE CASCADE,
+    party int references party(id) ON DELETE CASCADE,
+    userid INT REFERENCES users(id) ON DELETE CASCADE,
     registeredAt TIMESTAMP WITH TIME ZONE DEFAULT now()
     );
-    INSERT INTO candidates (office, party, candidate) VALUES (1, 1, 1);
 `;
 
 export const voteTable = `

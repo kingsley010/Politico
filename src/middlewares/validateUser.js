@@ -17,37 +17,47 @@ export default class ValidateUser {
   static signUpDetails(req, res, next) {
     const validate = Helper.validate();
     const {
-      firstname, lastname, phonenumber, email, passporturl,
+      firstname, lastname, phonenumber, email, password, passporturl,
     } = req.body;
     let error;
     if (!validate.name.test(firstname)) {
       error = 'invalid firstname';
     }
     if (!firstname || !firstname.trim()) {
-      error = 'This field (firstname) is required';
+      error = 'Firstname field is required';
     }
     if (!validate.name.test(lastname)) {
       error = 'invalid last name';
     }
     if (!lastname || !lastname.trim()) {
-      error = 'This field (lastname) is required';
+      error = 'Lastname field is required';
     }
     if (!email || !validate.email.test(email)) {
         error = 'email is invalid, please use a valid email';
     }
     if (!email || !email.trim()) {
-        error = 'This field (email) is required';
+        error = 'Email field is required';
     }
     if (!validate.phonenumber.test(phonenumber)) {
       error = 'phone number is invalid';
     }
     if (!phonenumber || !phonenumber.trim()) {
-      error = 'This field (phonenumber) is required';
+      error = 'phonenumber field is required';
     }
     if (!passporturl || !validate.logoUrl.test(passporturl)) {
       error = 'Please include a valid passport';
     }
+    if (!password.trim()) {
+      error = 'Password field cannot be empty';
+    }
+    if (!validate.hqAddress.test(password)) {
+      error = 'Password is invalid';
+    }
     if (error) {
+      return res.status(400).json({ status: 400, error });
+    }
+    if (password.length < 5) {
+      error = 'Password should not be less than 6 characters';
       return res.status(400).json({ status: 400, error });
     }
 
@@ -82,16 +92,16 @@ export default class ValidateUser {
     if (path === 'login') {
       return client.query(query, [email], (err, dbRes) => {
         if (dbRes.rowCount < 1) {
-          return res.status(404).json({
-            status: 404,
-            error: 'email does not exist',
+          return res.status(400).json({
+            status: 400,
+            error: 'Email or password is incorrect',
           });
         }
 
         const hashedPassword = dbRes.rows[0].password;
         const verifyPassword = Helper.verifyPassword(`${password}`, hashedPassword);
         if (!verifyPassword) {
-          error = 'password is incorrect';
+          error = 'Email or password is incorrect';
           status = 401;
         }
         if (error) {

@@ -41,6 +41,8 @@ import candidate from './src/routes/candidateRoute';
 app.use('/api/v1', candidate);
 import vote from './src/routes/voteRoute';
 app.use('/api/v1', vote);
+import result from './src/routes/resultRoute';
+app.use('/api/v1', result);
 
 app.use((req, res, next) => {
 	const error = new Error('Not Found');

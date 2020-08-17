@@ -1,3 +1,4 @@
+import jwt from 'jsonwebtoken';
 import Helper from '../helpers/helper';
 
 /**
@@ -7,25 +8,6 @@ import Helper from '../helpers/helper';
  */
 export default class AuthUser {
   /**
-   * @method authHeader
-   * @description Verifies authorization header
-   * @param {object} req - The Request Object
-   * @param {object} res - The Response Object
-   * @returns {object} - JSON response object
-   */
-  static authHeader(req) {
-    if (!req.headers.authorization || !req.headers['x-access-token'] || !req.body.token || req.query.token) {
-      return { error: 'error' };
-    }
-    const token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers.authorization.split(' ')[1];
-    const payload = Helper.verifyToken(token);
-    if (!payload) {
-      return { error: 'token' };
-    }
-    return payload;
-  }
-
-  /**
    * @method verifyUser
    * @description Verifies user
    * @param {object} req - The Request Object
@@ -33,21 +15,21 @@ export default class AuthUser {
    * @returns {object} - JSON response object
    */
   static verifyUser(req, res, next) {
-    const payload = AuthUser.authHeader(req);
-    let error;
-    let status;
-    if (!payload && payload.error === 'auth') {
-      status = 401;
-      error = 'Access is required';
+    const token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers['x-auth'];
+    if (token) {
+      jwt.verify(token, process.env.DB_SECRET, (err, decoded) => {
+        if (err) {
+          res.status(401).send(err);
+        } else {
+          req.decoded = decoded;
+        }
+      });
+    } else {
+      return res.status(400).send({
+        status: res.sendStatus,
+        message: 'No token provided'
+      });
     }
-    if (payload && payload.error === 'token') {
-      status = 401;
-      error = 'token cannot be authenticated.';
-    }
-    if (error) {
-      return res.status(status).json({ status, error });
-    }
-    req.user = payload;
     return next();
   }
 
@@ -59,14 +41,26 @@ export default class AuthUser {
    * @returns {object} - JSON response object
    */
   static verifyAdmin(req, res, next) {
-    const payload = AuthUser.authHeader(req);
-    const { id } = payload;
-    if (id === 1) {
-      return res.status(401).json({
-        status: 401,
-        error: 'Only a verified admin can access this endpoint',
+    const token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers['x-auth'];
+    if (token) {
+      jwt.verify(token, process.env.DB_SECRET, (err, decoded) => {   
+        if (err) {
+            return res.status(401).send(err);
+        }
+        if (decoded.isadmin === 'false') {
+            return req.isadmin = decoded.isadmin;
+        }
+        else {
+            return res.status(401).send({
+            status: res.statusCode,
+            error: 'Only an admin can access this resource',
+          });
+        }
       });
+    } else {
+            const err = { status: 403, message: 'Admin verification failed' };
+             return res.status(403).send(err);
     }
-    return next();
+    next();
   }
 }

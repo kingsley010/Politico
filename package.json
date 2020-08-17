@@ -7,13 +7,14 @@
     "start": "nodemon app.js --exec babel-node --presets babel-preset-env",
     "build": "babel --presets env src -d dist",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text _mocha --timeout 20000 --require babel-core/register --exit",
+    "test:dev": "npm run drop-tables && npm run create-tables && npm run test",
     "coveralls": "nyc npm test && nyc report --reporter=lcov --reporter=text --reporter=lcovonly || coveralls",
     "create-tables": "babel-node src/models/createTables",
     "drop-tables": "babel-node src/models/dropTables"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perfect090/Politico.git"
+    "url": "git+https://github.com/kingsley010/Politico.git"
   },
   "engines": {
     "node": "10.15.0",
@@ -28,9 +29,9 @@
   "author": "Obioha Kingsley",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/perfect090/Politico/issues"
+    "url": "https://github.com/kingsley010/Politico/issues"
   },
-  "homepage": "https://github.com/perfect090/Politico#readme",
+  "homepage": "https://github.com/kingsley010/Politico#readme",
   "dependencies": {
     "app-root-path": "^2.1.0",
     "babel-cli": "^6.26.0",
